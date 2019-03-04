@@ -272,7 +272,7 @@ if (!doNotTrack) {
 
 <p>想要把下面 dataframe , 分類後合併在一起</p>
 
-<pre><code class="language-python">   order   devie abbr
+<pre><code class="language-python">    order   devie abbr
 0   first  memory    m
 1  second     cpu    c
 2   third    disk    d
@@ -311,7 +311,7 @@ if (!doNotTrack) {
 
 <h2 id="使用-groupby-和-agg">使用 groupby 和 agg</h2>
 
-<p>​       最後把上述產生的 d 變數, 套用道 agg function 就產生想要的資料了</p>
+<p>​       最後把上述產生的 d 變數, 套用到 agg function 就產生想要的資料了</p>
 
 <pre><code class="language-python">&gt;&gt;&gt; df = data.groupby('order', as_index=False).agg(d)
 &gt;&gt;&gt; df
