@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="zh-tw">
+
+<head>
+  <title>CJ Hung Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="CJ Hung" />
+  <meta name="generator" content="Hugo 0.54.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/subineru.github.io/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/subineru.github.io/">CJ Hung Blog</a>
+            </h1>
+
+      <ul id="social-media">
+          
+        <li><a href="https://github.com/subineru"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
+          
+        <li><a href="https://www.facebook.com/subineru"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+         
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>[Python] 使用 Pandas groupby 和 agg 合併資料</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2019-03-03T22:34:27&#43;08:00">Mar 3, 2019</time>
+        </li>
+        
+        
+
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    
+
+<h2 id="前因">前因</h2>
+
+<p>想要把下面 dataframe , 分類後合併在一起</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">   order   devie abbr
+<span style="color:#ae81ff">0</span>   first  memory    m
+<span style="color:#ae81ff">1</span>  second     cpu    c
+<span style="color:#ae81ff">2</span>   third    disk    d
+<span style="color:#ae81ff">3</span>   first     cpu    c</code></pre></div>
+<p>成為下面的 data format</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    order        devie    abbr
+<span style="color:#ae81ff">0</span>   first  memory, cpu  [m, c]
+<span style="color:#ae81ff">1</span>  second          cpu     [c]
+<span style="color:#ae81ff">2</span>   third         disk     [d]</code></pre></div>
+<h2 id="先建立兩個-lambda-變數">先建立兩個 lambda 變數</h2>
+
+<p>​       f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span>f1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">.</span>join(x<span style="color:#f92672">.</span>dropna())
+<span style="color:#f92672">&gt;&gt;&gt;</span>f1(data<span style="color:#f92672">.</span>abbr)
+<span style="color:#e6db74">&#39;m, c, d, c&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>f2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: [z <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> x <span style="color:#66d9ef">for</span> z <span style="color:#f92672">in</span> y]
+<span style="color:#f92672">&gt;&gt;&gt;</span>f2(data<span style="color:#f92672">.</span>abbr)
+[<span style="color:#e6db74">&#39;m&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>]</code></pre></div>
+<p>​      將上述的 lambda 儲存在一個 dict 變數中, 分別對應 dataframe 各個欄位</p>
+
+<p>待會會套用在 agg function 上</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> d <span style="color:#f92672">=</span> dict<span style="color:#f92672">.</span>fromkeys(data<span style="color:#f92672">.</span>columns<span style="color:#f92672">.</span>difference([<span style="color:#e6db74">&#39;order&#39;</span>, <span style="color:#e6db74">&#39;abbr&#39;</span>]), f1)
+<span style="color:#f92672">&gt;&gt;&gt;</span> d[<span style="color:#e6db74">&#39;abbr&#39;</span>] <span style="color:#f92672">=</span> f2
+<span style="color:#f92672">&gt;&gt;&gt;</span> d
+{<span style="color:#e6db74">&#39;devie&#39;</span>: <span style="color:#f92672">&lt;</span>function <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">lambda</span><span style="color:#f92672">&gt;</span> at <span style="color:#ae81ff">0x7fa4b9105400</span><span style="color:#f92672">&gt;</span>, <span style="color:#e6db74">&#39;abbr&#39;</span>: <span style="color:#f92672">&lt;</span>function <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">lambda</span><span style="color:#f92672">&gt;</span> at <span style="color:#ae81ff">0x7fa4a23117b8</span><span style="color:#f92672">&gt;</span>}</code></pre></div>
+<h2 id="使用-groupby-和-agg">使用 groupby 和 agg</h2>
+
+<p>​       最後把上述產生的 d 變數, 套用道 agg function 就產生想要的資料了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> df <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;order&#39;</span>, as_index<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>agg(d)
+<span style="color:#f92672">&gt;&gt;&gt;</span> df
+    order        devie    abbr
+<span style="color:#ae81ff">0</span>   first  memory, cpu  [m, c]
+<span style="color:#ae81ff">1</span>  second          cpu     [c]
+<span style="color:#ae81ff">2</span>   third         disk     [d]</code></pre></div>
+<h2 id="reference">reference</h2>
+
+<p>​     <a href="https://stackoverflow.com/questions/54944344/pandas-how-to-group-by-a-value-in-column-when-there-is-list-in-one-of-the-colum">stackoverflow question 54944344</a></p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://https://subineru.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/subineru.github.io/js/scripts.js"></script>
+</body>
+
+</html>
