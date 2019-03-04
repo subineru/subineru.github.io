@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on CJ Hung Blog</title>
-    <link>https://https://subineru.github.io/post/</link>
-    <description>Recent content in Posts on CJ Hung Blog</description>
+    <title>CJ Hung Blog</title>
+    <link>https://subineru.github.io/post/</link>
+    <description>Recent content on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sun, 03 Mar 2019 22:34:27 +0800</lastBuildDate>
     
-	<atom:link href="https://https://subineru.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://subineru.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Python] 使用 Pandas groupby 和 agg 合併資料</title>
-      <link>https://https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</link>
+      <link>https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</link>
       <pubDate>Sun, 03 Mar 2019 22:34:27 +0800</pubDate>
       
-      <guid>https://https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</guid>
+      <guid>https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</guid>
       <description>前因 想要把下面 dataframe , 分類後合併在一起
-order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c 成為下面的 data format
-order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d] 先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
-&amp;gt;&amp;gt;&amp;gt;f1 = lambda x: &amp;#34;, &amp;#34;.join(x.dropna()) &amp;gt;&amp;gt;&amp;gt;f1(data.abbr) &amp;#39;m, c, d, c&amp;#39; &amp;gt;&amp;gt;&amp;gt;f2 = lambda x: [z for y in x for z in y] &amp;gt;&amp;gt;&amp;gt;f2(data.</description>
+order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c  成為下面的 data format
+order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
+&amp;gt;&amp;gt;&amp;gt;f1 = lambda x: &amp;quot;, &amp;quot;.join(x.dropna()) &amp;gt;&amp;gt;&amp;gt;f1(data.abbr) &#39;m, c, d, c&#39; &amp;gt;&amp;gt;&amp;gt;f2 = lambda x: [z for y in x for z in y] &amp;gt;&amp;gt;&amp;gt;f2(data.</description>
     </item>
     
   </channel>
