@@ -6,10 +6,22 @@
     <description>Recent content on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 03 Mar 2019 22:34:27 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Apr 2019 15:29:29 +0800</lastBuildDate>
     
 	<atom:link href="https://subineru.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>實數轉換成整數</title>
+      <link>https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</link>
+      <pubDate>Sun, 07 Apr 2019 15:29:29 +0800</pubDate>
+      
+      <guid>https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</guid>
+      <description>前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+從 stackoverflow 看到有兩種解法
+&amp;gt;&amp;gt;&amp;gt; num1 = 1.0 &amp;gt;&amp;gt;&amp;gt; int(num1) 1 &amp;gt;&amp;gt;&amp;gt; num2 = 1.5 &amp;gt;&amp;gt;&amp;gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
+&amp;gt;&amp;gt;&amp;gt; (1.0).is_integer() True &amp;gt;&amp;gt;&amp;gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; AttributeError: &#39;int&#39; object has no attribute &#39;is_integer&#39; &amp;gt;&amp;gt;&amp;gt; (1.5).is_integer() False &amp;gt;&amp;gt;&amp;gt; (0.9999999999 ).is_integer() False &amp;gt;&amp;gt;&amp;gt; data = [1.</description>
+    </item>
     
     <item>
       <title>[Python] 使用 Pandas groupby 和 agg 合併資料</title>

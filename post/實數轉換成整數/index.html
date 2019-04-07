@@ -7,9 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>CJ Hung Blog - CJ Hung Blog</title>
-  <meta property="og:title" content="CJ Hung Blog" />
-  <meta name="twitter:title" content="CJ Hung Blog" />
+  <title>實數轉換成整數 - CJ Hung Blog</title>
+  <meta property="og:title" content="實數轉換成整數" />
+  <meta name="twitter:title" content="實數轉換成整數" />
+  <meta name="description" content="前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+從 stackoverflow 看到有兩種解法
+&gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
+&gt;&gt;&gt; (1.0).is_integer() True &gt;&gt;&gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; AttributeError: &#39;int&#39; object has no attribute &#39;is_integer&#39; &gt;&gt;&gt; (1.5).is_integer() False &gt;&gt;&gt; (0.9999999999 ).is_integer() False &gt;&gt;&gt; data = [1.">
+  <meta property="og:description" content="前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+從 stackoverflow 看到有兩種解法
+&gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
+&gt;&gt;&gt; (1.0).is_integer() True &gt;&gt;&gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; AttributeError: &#39;int&#39; object has no attribute &#39;is_integer&#39; &gt;&gt;&gt; (1.5).is_integer() False &gt;&gt;&gt; (0.9999999999 ).is_integer() False &gt;&gt;&gt; data = [1.">
+  <meta name="twitter:description" content="前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+從 stackoverflow 看到有兩種解法
+&gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if …">
   <meta name="author" content="CJ Hung"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -30,15 +41,73 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://subineru.github.io/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/",
+          "name": "實數轉換成整數"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "CJ Hung"
+  },
+  "headline": "實數轉換成整數",
+  "description" : "前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+從 stackoverflow 看到有兩種解法
+&amp;gt;&amp;gt;&amp;gt; num1 = 1.0 &amp;gt;&amp;gt;&amp;gt; int(num1) 1 &amp;gt;&amp;gt;&amp;gt; num2 = 1.5 &amp;gt;&amp;gt;&amp;gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
+&amp;gt;&amp;gt;&amp;gt; (1.0).is_integer() True &amp;gt;&amp;gt;&amp;gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; AttributeError: &#39;int&#39; object has no attribute &#39;is_integer&#39; &amp;gt;&amp;gt;&amp;gt; (1.5).is_integer() False &amp;gt;&amp;gt;&amp;gt; (0.9999999999 ).is_integer() False &amp;gt;&amp;gt;&amp;gt; data = [1.",
+  "inLanguage" : "en",
+  "wordCount": 147,
+  "datePublished" : "2019-04-07T15:29:29",
+  "dateModified" : "2019-04-07T15:29:29",
+  "image" : "https://subineru.github.io/",
+  "keywords" : [ "python" ],
+  "mainEntityOfPage" : "https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://subineru.github.io/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://subineru.github.io/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="CJ Hung Blog" />
-<meta property="og:url" content="https://subineru.github.io/" />
+<meta property="og:title" content="實數轉換成整數" />
+<meta property="og:description" content="前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+從 stackoverflow 看到有兩種解法
+&gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
+&gt;&gt;&gt; (1.0).is_integer() True &gt;&gt;&gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; AttributeError: &#39;int&#39; object has no attribute &#39;is_integer&#39; &gt;&gt;&gt; (1.5).is_integer() False &gt;&gt;&gt; (0.9999999999 ).is_integer() False &gt;&gt;&gt; data = [1.">
+<meta property="og:url" content="https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="CJ Hung Blog" />
-  <meta name="twitter:title" content="CJ Hung Blog" />
+  <meta name="twitter:title" content="實數轉換成整數" />
+  <meta name="twitter:description" content="前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+從 stackoverflow 看到有兩種解法
+&gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if …">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://subineru.github.io/" />
+  <meta property="og:url" content="https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CJ Hung Blog" />
 
@@ -161,40 +230,14 @@ if (!doNotTrack) {
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
+            <div class="post-heading">
               
-                <h1>CJ Hung Blog</h1>
-              
-              
-                <hr class="small">
+                <h1>實數轉換成整數</h1>
               
               
               
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-
-    
-  <div role="main" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-
-        <div class="posts-list">
-          
-          
-            <article class="post-preview">
-              <a href="https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">
-                <h2 class="post-title">實數轉換成整數</h2>
-                
-                
-              </a>
-
-              <span class="post-meta">
+              
+                <span class="post-meta">
   
   
   <i class="fas fa-calendar"></i>&nbsp;Posted on April 7, 2019
@@ -208,73 +251,106 @@ if (!doNotTrack) {
 </span>
 
 
-              <div class="post-entry">
-                
-                  前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
-從 stackoverflow 看到有兩種解法
-&gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
-&gt;&gt;&gt; (1.0).is_integer() True &gt;&gt;&gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; AttributeError: 'int' object has no attribute 'is_integer' &gt;&gt;&gt; (1.5).is_integer() False &gt;&gt;&gt; (0.9999999999 ).is_integer() False &gt;&gt;&gt; data = [1.
-                  <a href="https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
               
-                <div class="blog-tags">
-                  
-                    <a href="https://subineru.github.io//tags/python/">python</a>&nbsp;
-                  
-                </div>
-              
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">
-                <h2 class="post-title">[Python] 使用 Pandas groupby 和 agg 合併資料</h2>
-                
-                
-              </a>
-
-              <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 3, 2019
-  
-  
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;CJ Hung
-  
-  
-</span>
-
-
-              <div class="post-entry">
-                
-                  前因 想要把下面 dataframe , 分類後合併在一起
-order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c  成為下面的 data format
-order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
-&gt;&gt;&gt;f1 = lambda x: &quot;, &quot;.join(x.dropna()) &gt;&gt;&gt;f1(data.abbr) 'm, c, d, c' &gt;&gt;&gt;f2 = lambda x: [z for y in x for z in y] &gt;&gt;&gt;f2(data.
-                  <a href="https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://subineru.github.io//tags/python/">python</a>&nbsp;
-                  
-                    <a href="https://subineru.github.io//tags/pandas/">pandas</a>&nbsp;
-                  
-                </div>
-              
-            </article>
-          
+            </div>
+          </div>
         </div>
-
-        
       </div>
     </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h1 id="前言">前言</h1>
+
+<p>​   使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,</p>
+
+<p>從 stackoverflow 看到有兩種解法</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; num1 = 1.0
+&gt;&gt;&gt; int(num1)
+1
+&gt;&gt;&gt; num2 = 1.5
+&gt;&gt;&gt; int(num2)
+1
+</code></pre>
+
+<h1 id="解法一">解法一</h1>
+
+<p>​   使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; (1.0).is_integer()
+True
+&gt;&gt;&gt; (1).is_integer()       ### 缺點是已經是整數的變數, 會跳錯
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+AttributeError: 'int' object has no attribute 'is_integer'
+&gt;&gt;&gt; (1.5).is_integer()
+False
+&gt;&gt;&gt; (0.9999999999 ).is_integer()
+False
+&gt;&gt;&gt; data = [1.0, 1, 1.5, 0.9999999999]
+&gt;&gt;&gt; print(list(map(lambda x: int(x) if int(x) == x else x, data)))   ### 運用 lambda 的特性可以避免例外
+[1, 1, 1.5, 0.9999999999]
+</code></pre>
+
+<h1 id="解法二">解法二</h1>
+
+<p>​   使用 &lsquo;%g&rsquo;` (&ldquo;General Format) 處理</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; &gt;&gt;&gt; '%g' % 1.0
+'1'
+&gt;&gt;&gt; '%g' % 1
+'1'
+&gt;&gt;&gt; '%g' % 1.5
+'1.5'
+&gt;&gt;&gt; '%g' % 0.9999999999      ### 缺點是趨近於 1 的數值仍然會被捨去
+'1'
+&gt;&gt;&gt; '%.10g' % 0.9999999999   ### 調高格式化的長度
+'0.9999999999'
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p>​    <a href="https://stackoverflow.com/questions/55510485/python-return-float-1-0-as-int-1-but-float-1-5-as-float-1-5">Python: return float 1.0 as int 1 but float 1.5 as float 1.5</a>]</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://subineru.github.io//tags/python/">python</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/" data-toggle="tooltip" data-placement="top" title="[Python] 使用 Pandas groupby 和 agg 合併資料">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
   </div>
+</div>
 
     <footer>
   <div class="container">

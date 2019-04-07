@@ -7,15 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>CJ Hung Blog - CJ Hung Blog</title>
-  <meta property="og:title" content="CJ Hung Blog" />
-  <meta name="twitter:title" content="CJ Hung Blog" />
-  <meta name="description" content="TOML:
-```toml &#43;&#43;&#43; title = &ldquo;Posts&rdquo; menu = &ldquo;main&rdquo; weight = &ldquo;10&rdquo; &#43;&#43;&#43;">
-  <meta property="og:description" content="TOML:
-```toml &#43;&#43;&#43; title = &ldquo;Posts&rdquo; menu = &ldquo;main&rdquo; weight = &ldquo;10&rdquo; &#43;&#43;&#43;">
-  <meta name="twitter:description" content="TOML:
-```toml &#43;&#43;&#43; title = &ldquo;Posts&rdquo; menu = &ldquo;main&rdquo; weight = &ldquo;10&rdquo; &#43;&#43;&#43;">
+  <title>Overview of all pages with the tag #Pandas - CJ Hung Blog</title>
+  <meta property="og:title" content="Overview of all pages with the tag #Pandas" />
+  <meta name="twitter:title" content="Overview of all pages with the tag #Pandas" />
+  <meta name="description" content="Overview of all pages with the tag #Pandas, such as: [Python] 使用 Pandas groupby 和 agg 合併資料">
+  <meta property="og:description" content="Overview of all pages with the tag #Pandas, such as: [Python] 使用 Pandas groupby 和 agg 合併資料">
+  <meta name="twitter:description" content="Overview of all pages with the tag #Pandas, such as: [Python] 使用 Pandas groupby 和 agg 合併資料">
   <meta name="author" content="CJ Hung"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -37,18 +34,14 @@
 }
 </script>
 
-<meta property="og:title" content="CJ Hung Blog" />
-<meta property="og:description" content="TOML:
-```toml &#43;&#43;&#43; title = &ldquo;Posts&rdquo; menu = &ldquo;main&rdquo; weight = &ldquo;10&rdquo; &#43;&#43;&#43;">
-<meta property="og:url" content="https://subineru.github.io/post/" />
+<meta property="og:title" content="Pandas" />
+<meta property="og:url" content="https://subineru.github.io/tags/pandas/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="CJ Hung Blog" />
-  <meta name="twitter:title" content="CJ Hung Blog" />
-  <meta name="twitter:description" content="TOML:
-```toml &#43;&#43;&#43; title = &ldquo;Posts&rdquo; menu = &ldquo;main&rdquo; weight = &ldquo;10&rdquo; &#43;&#43;&#43;">
+  <meta name="twitter:title" content="Pandas" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://subineru.github.io/post/" />
+  <meta property="og:url" content="https://subineru.github.io/tags/pandas/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CJ Hung Blog" />
 
@@ -163,7 +156,29 @@ if (!doNotTrack) {
 
 
 
-  <div class="intro-header"></div>
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="tags-heading">
+              
+                <h1>Pandas</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
 
     
@@ -171,62 +186,7 @@ if (!doNotTrack) {
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-          <div class="well">
-            <p>TOML:</p>
-
-<p>```toml
-+++
-title = &ldquo;Posts&rdquo;
-menu = &ldquo;main&rdquo;
-weight = &ldquo;10&rdquo;
-+++</p>
-
-          </div>
-        
         <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">
-                <h2 class="post-title">實數轉換成整數</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 7, 2019
-  
-  
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;CJ Hung
-  
-  
-</span>
-
-
-              </p>
-              <div class="post-entry">
-                
-                  前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
-從 stackoverflow 看到有兩種解法
-&gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
-&gt;&gt;&gt; (1.0).is_integer() True &gt;&gt;&gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; AttributeError: 'int' object has no attribute 'is_integer' &gt;&gt;&gt; (1.5).is_integer() False &gt;&gt;&gt; (0.9999999999 ).is_integer() False &gt;&gt;&gt; data = [1.
-                  <a href="https://subineru.github.io/post/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://subineru.github.io//tags/python/">python</a>&nbsp;
-                  
-                </div>
-              
-
-            </article>
           
             <article class="post-preview">
               <a href="https://subineru.github.io/post/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">
