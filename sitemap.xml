@@ -42,4 +42,9 @@
     <priority>0</priority>
   </url>
   
+  <url>
+    <loc>https://subineru.github.io/post/python-100days5/</loc>
+    <priority>0</priority>
+  </url>
+  
 </urlset>
