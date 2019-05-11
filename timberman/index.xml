@@ -1,0 +1,23 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Timbermen on CJ Hung Blog</title>
+    <link>https://subineru.github.io/timberman/</link>
+    <description>Recent content in Timbermen on CJ Hung Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 11 May 2019 17:00:27 +0800</lastBuildDate>
+    
+        <atom:link href="https://subineru.github.io/timberman/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Timberman 成績紀錄1</title>
+      <link>https://subineru.github.io/timberman/190511/</link>
+      <pubDate>Sat, 11 May 2019 17:00:27 +0800</pubDate>
+      
+      <guid>https://subineru.github.io/timberman/190511/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
