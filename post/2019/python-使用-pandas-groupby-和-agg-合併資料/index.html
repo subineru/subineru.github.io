@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CJ Hung Blog  | 使用 Pandas groupby 和 agg 合併資料</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://subineru.github.io/css/blog.css" />
+    
+</head>
+<body>
+
+    
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://subineru.github.io/">Home</a>
+        </div>
+    </nav>
+    
+
+    
+    <section class="hero is-info is-medium">
+        <div class="hero-body" style="background-image: url(https://subineru.github.io/img/bg-blog.jpg);">
+            <div class="container has-text-centered">
+                <br>
+                <h1 class="title is-size-1">
+                    
+                        使用 Pandas groupby 和 agg 合併資料
+                    
+                </h1>
+                
+            </div>
+        </div>
+    </section>
+
+
+<div class="container">
+    <div class="section">
+    
+
+<div class="columns">
+    <div class="column is-9">
+        <div class="tile is-child box">
+            <div class="content">
+                
+
+<h2 id="前因">前因</h2>
+
+<p>想要把下面 dataframe , 分類後合併在一起</p>
+
+<pre><code class="language-python">    order   devie abbr
+0   first  memory    m
+1  second     cpu    c
+2   third    disk    d
+3   first     cpu    c
+</code></pre>
+
+<p>成為下面的 data format</p>
+
+<pre><code class="language-python">    order        devie    abbr
+0   first  memory, cpu  [m, c]
+1  second          cpu     [c]
+2   third         disk     [d]
+</code></pre>
+
+<h2 id="先建立兩個-lambda-變數">先建立兩個 lambda 變數</h2>
+
+<p>​       f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list</p>
+
+<pre><code class="language-python">&gt;&gt;&gt;f1 = lambda x: &quot;, &quot;.join(x.dropna())
+&gt;&gt;&gt;f1(data.abbr)
+'m, c, d, c'
+&gt;&gt;&gt;f2 = lambda x: [z for y in x for z in y]
+&gt;&gt;&gt;f2(data.abbr)
+['m', 'c', 'd', 'c']
+</code></pre>
+
+<p>​      將上述的 lambda 儲存在一個 dict 變數中, 分別對應 dataframe 各個欄位</p>
+
+<p>待會會套用在 agg function 上</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; d = dict.fromkeys(data.columns.difference(['order', 'abbr']), f1)
+&gt;&gt;&gt; d['abbr'] = f2
+&gt;&gt;&gt; d
+{'devie': &lt;function &lt;lambda&gt; at 0x7fa4b9105400&gt;, 'abbr': &lt;function &lt;lambda&gt; at 0x7fa4a23117b8&gt;}
+</code></pre>
+
+<h2 id="使用-groupby-和-agg">使用 groupby 和 agg</h2>
+
+<p>​       最後把上述產生的 d 變數, 套用到 agg function 就產生想要的資料了</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; df = data.groupby('order', as_index=False).agg(d)
+&gt;&gt;&gt; df
+    order        devie    abbr
+0   first  memory, cpu  [m, c]
+1  second          cpu     [c]
+2   third         disk     [d]
+</code></pre>
+
+<h2 id="reference">reference</h2>
+
+<p>​     <a href="https://stackoverflow.com/questions/54944344/pandas-how-to-group-by-a-value-in-column-when-there-is-list-in-one-of-the-colum">stackoverflow question 54944344</a></p>
+
+            </div>
+        </div>
+    </div>
+    <div class="column is-3">
+        <div class="card">
+    <div class="card-content">
+        <h1 class="title is-5">Tags</h1>
+        <div class="tags">
+        
+            <span class="tag"><a href="https://subineru.github.io/tags/pandas">pandas</a></span>
+        
+            <span class="tag"><a href="https://subineru.github.io/tags/python">python</a></span>
+        
+            <span class="tag"><a href="https://subineru.github.io/tags/timberman">timberman</a></span>
+        
+        </div>          
+    </div>
+</div><br>
+        <div class="card">
+    <div class="card-content">
+        <h1 class="title is-5">Recent posts</h1>
+        
+            <h1><a href="https://subineru.github.io/post/2019/python-100days5/">練習 Python 100 Days(5)</a></h1>
+            <time class="has-text-grey-light is-size-7">11 May 2019</time>
+        
+            <h1><a href="https://subineru.github.io/post/2019/190511-timberman/">Timberman 成績紀錄1</a></h1>
+            <time class="has-text-grey-light is-size-7">11 May 2019</time>
+        
+            <h1><a href="https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a></h1>
+            <time class="has-text-grey-light is-size-7">7 April 2019</time>
+        
+            <h1><a href="https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a></h1>
+            <time class="has-text-grey-light is-size-7">3 March 2019</time>
+        
+    </div>
+</div>
+    <br>
+                
+  
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h1 class="title is-5">Related posts</h1>
+      
+      
+            <h1><a href="https://subineru.github.io/post/2019/python-100days5/">練習 Python 100 Days(5)</a></h1>
+            <time class="has-text-grey-light is-size-7">11 May 2019</time>
+      
+            <h1><a href="https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a></h1>
+            <time class="has-text-grey-light is-size-7">7 April 2019</time>
+      
+    </div>
+</div>
+
+    
+<br>
+        <div class="card">
+    <div class="card-content">
+        <h1 class="title is-5">Archives</h1>
+        
+            <a href="https://subineru.github.io/archives/2019">2019</a> (4)<br>
+        
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+<footer class="footer has-background-grey-darker has-text-white">
+    <div class="content has-text-centered">
+        <p>
+            <span class="icon is-large"><a href="https://twitter.com/" class="mysocial" rel="me"><i class="fab fa-twitter fa-3x"></i></a></span>&nbsp;&nbsp;
+            <span class="icon is-large"><a href="https://www.youtube.com/" class="mysocial" rel="me"><i class="fab fa-youtube fa-3x"></i></a></span>&nbsp;&nbsp;
+            <span class="icon is-large"><a href="https://github.com/" class="mysocial" rel="me"><i class="fab fa-github fa-3x"></i></a></span>&nbsp;&nbsp;
+            <br><br>
+            Copyright &copy; CJ Hung Blog 2019 - Theme by <a href="https://jeffprod.com" class="mysocial">JeffProd.com</a>
+            - <a class="mysocial" href="https://subineru.github.io/about">About</a>
+        </p>
+    </div>
+</footer>
+
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+</body>
+</html>
