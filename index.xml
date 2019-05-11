@@ -35,9 +35,9 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
     </item>
     
     <item>
-      <title></title>
+      <title>[Python] 練習 Python 100 Days(5)</title>
       <link>https://subineru.github.io/post/python-100days5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Mar 2019 22:34:27 +0800</pubDate>
       
       <guid>https://subineru.github.io/post/python-100days5/</guid>
       <description>練習 Python 100 Days 前幾天的比較簡單, 就從第五天的練習題開始
