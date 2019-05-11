@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CJ Hung Blog  | 實數轉換成整數</title>
+    <title>CJ Hung Blog  | 使用 Pandas groupby 和 agg 合併資料</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -29,7 +29,7 @@
                 <br>
                 <h1 class="title is-size-1">
                     
-                        實數轉換成整數
+                        使用 Pandas groupby 和 agg 合併資料
                     
                 </h1>
                 
@@ -48,58 +48,62 @@
             <div class="content">
                 
 
-<h1 id="前言">前言</h1>
+<h2 id="前因">前因</h2>
 
-<p>​   使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,</p>
+<p>想要把下面 dataframe , 分類後合併在一起</p>
 
-<p>從 stackoverflow 看到有兩種解法</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; num1 = 1.0
-&gt;&gt;&gt; int(num1)
-1
-&gt;&gt;&gt; num2 = 1.5
-&gt;&gt;&gt; int(num2)
-1
+<pre><code class="language-python">    order   devie abbr
+0   first  memory    m
+1  second     cpu    c
+2   third    disk    d
+3   first     cpu    c
 </code></pre>
 
-<h1 id="解法一">解法一</h1>
+<p>成為下面的 data format</p>
 
-<p>​   使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; (1.0).is_integer()
-True
-&gt;&gt;&gt; (1).is_integer()       ### 缺點是已經是整數的變數, 會跳錯
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-AttributeError: 'int' object has no attribute 'is_integer'
-&gt;&gt;&gt; (1.5).is_integer()
-False
-&gt;&gt;&gt; (0.9999999999 ).is_integer()
-False
-&gt;&gt;&gt; data = [1.0, 1, 1.5, 0.9999999999]
-&gt;&gt;&gt; print(list(map(lambda x: int(x) if int(x) == x else x, data)))   ### 運用 lambda 的特性可以避免例外
-[1, 1, 1.5, 0.9999999999]
+<pre><code class="language-python">    order        devie    abbr
+0   first  memory, cpu  [m, c]
+1  second          cpu     [c]
+2   third         disk     [d]
 </code></pre>
 
-<h1 id="解法二">解法二</h1>
+<h2 id="先建立兩個-lambda-變數">先建立兩個 lambda 變數</h2>
 
-<p>​   使用 &lsquo;%g&rsquo;` (&ldquo;General Format) 處理</p>
+<p>​       f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; &gt;&gt;&gt; '%g' % 1.0
-'1'
-&gt;&gt;&gt; '%g' % 1
-'1'
-&gt;&gt;&gt; '%g' % 1.5
-'1.5'
-&gt;&gt;&gt; '%g' % 0.9999999999      ### 缺點是趨近於 1 的數值仍然會被捨去
-'1'
-&gt;&gt;&gt; '%.10g' % 0.9999999999   ### 調高格式化的長度
-'0.9999999999'
+<pre><code class="language-python">&gt;&gt;&gt;f1 = lambda x: &quot;, &quot;.join(x.dropna())
+&gt;&gt;&gt;f1(data.abbr)
+'m, c, d, c'
+&gt;&gt;&gt;f2 = lambda x: [z for y in x for z in y]
+&gt;&gt;&gt;f2(data.abbr)
+['m', 'c', 'd', 'c']
 </code></pre>
 
-<h1 id="reference">Reference</h1>
+<p>​      將上述的 lambda 儲存在一個 dict 變數中, 分別對應 dataframe 各個欄位</p>
 
-<p>​    <a href="https://stackoverflow.com/questions/55510485/python-return-float-1-0-as-int-1-but-float-1-5-as-float-1-5">Python: return float 1.0 as int 1 but float 1.5 as float 1.5</a>]</p>
+<p>待會會套用在 agg function 上</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; d = dict.fromkeys(data.columns.difference(['order', 'abbr']), f1)
+&gt;&gt;&gt; d['abbr'] = f2
+&gt;&gt;&gt; d
+{'devie': &lt;function &lt;lambda&gt; at 0x7fa4b9105400&gt;, 'abbr': &lt;function &lt;lambda&gt; at 0x7fa4a23117b8&gt;}
+</code></pre>
+
+<h2 id="使用-groupby-和-agg">使用 groupby 和 agg</h2>
+
+<p>​       最後把上述產生的 d 變數, 套用到 agg function 就產生想要的資料了</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; df = data.groupby('order', as_index=False).agg(d)
+&gt;&gt;&gt; df
+    order        devie    abbr
+0   first  memory, cpu  [m, c]
+1  second          cpu     [c]
+2   third         disk     [d]
+</code></pre>
+
+<h2 id="reference">reference</h2>
+
+<p>​     <a href="https://stackoverflow.com/questions/54944344/pandas-how-to-group-by-a-value-in-column-when-there-is-list-in-one-of-the-colum">stackoverflow question 54944344</a></p>
 
             </div>
         </div>
@@ -123,16 +127,16 @@ False
     <div class="card-content">
         <h1 class="title is-5">Recent posts</h1>
         
-            <h1><a href="https://subineru.github.io/post/2019/python-100days5/">練習 Python 100 Days(5)</a></h1>
+            <h1><a href="https://subineru.github.io/archives/2019/python-100days5/">練習 Python 100 Days(5)</a></h1>
             <time class="has-text-grey-light is-size-7">11 May 2019</time>
         
-            <h1><a href="https://subineru.github.io/post/2019/190511-timberman/">Timberman 成績紀錄1</a></h1>
+            <h1><a href="https://subineru.github.io/archives/2019/190511-timberman/">Timberman 成績紀錄1</a></h1>
             <time class="has-text-grey-light is-size-7">11 May 2019</time>
         
-            <h1><a href="https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a></h1>
+            <h1><a href="https://subineru.github.io/archives/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a></h1>
             <time class="has-text-grey-light is-size-7">7 April 2019</time>
         
-            <h1><a href="https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a></h1>
+            <h1><a href="https://subineru.github.io/archives/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a></h1>
             <time class="has-text-grey-light is-size-7">3 March 2019</time>
         
     </div>
@@ -148,11 +152,11 @@ False
         <h1 class="title is-5">Related posts</h1>
       
       
-            <h1><a href="https://subineru.github.io/post/2019/python-100days5/">練習 Python 100 Days(5)</a></h1>
+            <h1><a href="https://subineru.github.io/archives/2019/python-100days5/">練習 Python 100 Days(5)</a></h1>
             <time class="has-text-grey-light is-size-7">11 May 2019</time>
       
-            <h1><a href="https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a></h1>
-            <time class="has-text-grey-light is-size-7">3 March 2019</time>
+            <h1><a href="https://subineru.github.io/archives/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a></h1>
+            <time class="has-text-grey-light is-size-7">7 April 2019</time>
       
     </div>
 </div>

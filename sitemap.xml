@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://subineru.github.io/</loc>
+    <loc>https://subineru.github.io/post/</loc>
     <lastmod>2019-05-11T17:00:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://subineru.github.io/post/</loc>
+    <loc>https://subineru.github.io/</loc>
     <lastmod>2019-05-11T17:00:27+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -21,7 +21,7 @@
   </url>
   
   <url>
-    <loc>https://subineru.github.io/post/2019/190511-timberman/</loc>
+    <loc>https://subineru.github.io/archives/2019/190511-timberman/</loc>
     <lastmod>2019-05-11T17:00:27+08:00</lastmod>
   </url>
   
@@ -38,12 +38,12 @@
   </url>
   
   <url>
-    <loc>https://subineru.github.io/post/2019/python-100days5/</loc>
+    <loc>https://subineru.github.io/archives/2019/python-100days5/</loc>
     <lastmod>2019-05-11T17:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</loc>
+    <loc>https://subineru.github.io/archives/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</loc>
     <lastmod>2019-04-07T15:29:29+08:00</lastmod>
   </url>
   
@@ -54,13 +54,8 @@
   </url>
   
   <url>
-    <loc>https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</loc>
+    <loc>https://subineru.github.io/archives/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</loc>
     <lastmod>2019-03-03T22:34:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://subineru.github.io/post/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
