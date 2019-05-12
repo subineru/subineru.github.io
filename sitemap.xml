@@ -4,31 +4,48 @@
   
   <url>
     <loc>https://subineru.github.io/post/</loc>
-    <lastmod>2019-05-11T17:00:27+08:00</lastmod>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://subineru.github.io/archives/2019/</loc>
-    <lastmod>2019-05-11T17:00:27+08:00</lastmod>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://subineru.github.io/archives/</loc>
-    <lastmod>2019-05-11T17:00:27+08:00</lastmod>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://subineru.github.io/</loc>
-    <lastmod>2019-05-11T17:00:27+08:00</lastmod>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://subineru.github.io/tags/</loc>
-    <lastmod>2019-05-11T17:00:27+08:00</lastmod>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://subineru.github.io/post/2019/190512-timberman/</loc>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://subineru.github.io/tags/game/</loc>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://subineru.github.io/tags/timberman/</loc>
+    <lastmod>2019-05-12T13:55:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -39,12 +56,6 @@
   
   <url>
     <loc>https://subineru.github.io/tags/python/</loc>
-    <lastmod>2019-05-11T17:00:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://subineru.github.io/tags/timberman/</loc>
     <lastmod>2019-05-11T17:00:27+08:00</lastmod>
     <priority>0</priority>
   </url>
