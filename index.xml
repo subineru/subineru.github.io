@@ -81,5 +81,14 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
 &amp;gt;&amp;gt;&amp;gt;f1 = lambda x: &amp;quot;, &amp;quot;.join(x.dropna()) &amp;gt;&amp;gt;&amp;gt;f1(data.abbr) &#39;m, c, d, c&#39; &amp;gt;&amp;gt;&amp;gt;f2 = lambda x: [z for y in x for z in y] &amp;gt;&amp;gt;&amp;gt;f2(data.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://subineru.github.io/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://subineru.github.io/archives/</guid>
+      <description>title: &amp;ldquo;歸檔&amp;rdquo; description: _ type: archives</description>
+    </item>
+    
   </channel>
 </rss>
