@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CJ Hung Blog  | Archives</title>
+    <title>CJ Hung Blog  | 初探 Linux 的大括號擴展(Brace expansion)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
     <link rel="stylesheet" href="https://subineru.github.io/css/blog.css" />
     
-  <link href="https://subineru.github.io/archives/index.xml" rel="alternate" type="application/rss+xml" title="CJ Hung Blog" />
-  <link href="https://subineru.github.io/archives/index.xml" rel="feed" type="application/rss+xml" title="CJ Hung Blog" />
-
 </head>
 <body>
 
@@ -32,7 +29,7 @@
                 <br>
                 <h1 class="title is-size-1">
                     
-                        Archive Archives
+                        初探 Linux 的大括號擴展(Brace expansion)
                     
                 </h1>
                 
@@ -45,11 +42,62 @@
     <div class="section">
     
 
-
 <div class="columns">
     <div class="column is-9">
         <div class="tile is-child box">
             <div class="content">
+                
+
+<p>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,</p>
+
+<p>而且產生的字串組合, 不一定要有實際檔案的存在,</p>
+
+<p>在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt</p>
+
+<pre><code class="language-shell"># echo foo{1,2}.txt
+foo1.txt foo2.txt
+# cp -v foo{1,2}.txt
+'foo1.txt' -&gt; 'foo2.txt'
+</code></pre>
+
+<p>大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,</p>
+
+<p>逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串</p>
+
+<h3 id="逗號">逗號</h3>
+
+<p>使用範例</p>
+
+<pre><code class="language-shell"># echo file{,1,2}
+file file1 file2
+# mkdir -v file{,1,2}
+mkdir: created directory 'file'
+mkdir: created directory 'file1'
+mkdir: created directory 'file2'
+
+</code></pre>
+
+<h3 id="句號">句號</h3>
+
+<p>使用範例</p>
+
+<pre><code class="language-shell"># echo file{1..5}
+file1 file2 file3 file4 file5
+# mkdir -v file{1..5}
+mkdir: created directory 'file1'
+mkdir: created directory 'file2'
+mkdir: created directory 'file3'
+mkdir: created directory 'file4'
+mkdir: created directory 'file5'
+</code></pre>
+
+<h3 id="複雜的使用方式">複雜的使用方式</h3>
+
+<p>在一個字串中同時放很多個大括號擴展</p>
+
+<pre><code class="language-shell"># echo {apache,nginx}-{index,default}-0{1..2}.html
+apache-index-01.html apache-index-02.html apache-default-01.html apache-default-02.html nginx-index-01.html nginx-index-02.html nginx-default-01.html nginx-default-02.html
+</code></pre>
 
             </div>
         </div>
@@ -97,6 +145,11 @@
     </div>
 </div>
     <br>
+                
+
+
+    
+<br>
         <div class="card">
     <div class="card-content">
         <h1 class="title is-5">Archives</h1>
@@ -108,7 +161,6 @@
 
     </div>
 </div>
-
 
 
     </div>

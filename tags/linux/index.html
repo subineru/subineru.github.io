@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CJ Hung Blog  | Archives</title>
+    <title>CJ Hung Blog  | linux</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
     <link rel="stylesheet" href="https://subineru.github.io/css/blog.css" />
     
-  <link href="https://subineru.github.io/archives/index.xml" rel="alternate" type="application/rss+xml" title="CJ Hung Blog" />
-  <link href="https://subineru.github.io/archives/index.xml" rel="feed" type="application/rss+xml" title="CJ Hung Blog" />
+  <link href="https://subineru.github.io/tags/linux/index.xml" rel="alternate" type="application/rss+xml" title="CJ Hung Blog" />
+  <link href="https://subineru.github.io/tags/linux/index.xml" rel="feed" type="application/rss+xml" title="CJ Hung Blog" />
 
 </head>
 <body>
@@ -32,7 +32,7 @@
                 <br>
                 <h1 class="title is-size-1">
                     
-                        Archive Archives
+                        #linux
                     
                 </h1>
                 
@@ -46,10 +46,32 @@
     
 
 
+
 <div class="columns">
     <div class="column is-9">
         <div class="tile is-child box">
             <div class="content">
+
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="title is-4"><a href="/post/2019/190824-brace-expansion/">初探 Linux 的大括號擴展(Brace expansion)</a></p>
+                            <p class="subtitle is-size-6 has-text-grey-light">
+                                Published at August 24, 2019 &middot;
+                                <i class="far fa-clock"></i>&nbsp;1 min read
+                            </p>
+                            <p>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
+而且產生的字串組合, 不一定要有實際檔案的存在,
+在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
+# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt 'foo1.txt' -&gt; 'foo2.txt'  大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
+逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
+逗號 使用範例
+# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory 'file' mkdir: created directory 'file1' mkdir: created directory 'file2'  句號 使用範例
+# echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1....</p>
+                        </div>
+                    </div>
+                </article>
+                <br>
 
             </div>
         </div>
@@ -108,7 +130,6 @@
 
     </div>
 </div>
-
 
 
     </div>

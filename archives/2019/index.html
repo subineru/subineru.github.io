@@ -54,6 +54,27 @@
                 <article class="media">
                     <div class="media-content">
                         <div class="content">
+                            <p class="title is-4"><a href="/post/2019/190824-brace-expansion/">初探 Linux 的大括號擴展(Brace expansion)</a></p>
+                            <p class="subtitle is-size-6 has-text-grey-light">
+                                Published at August 24, 2019 &middot;
+                                <i class="far fa-clock"></i>&nbsp;1 min read
+                            </p>
+                            <p>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
+而且產生的字串組合, 不一定要有實際檔案的存在,
+在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
+# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt 'foo1.txt' -&gt; 'foo2.txt'  大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
+逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
+逗號 使用範例
+# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory 'file' mkdir: created directory 'file1' mkdir: created directory 'file2'  句號 使用範例
+# echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1....</p>
+                        </div>
+                    </div>
+                </article>
+                <br>
+
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
                             <p class="title is-4"><a href="/post/2019/190512-timberman/">Timberman 砍了1026個木頭</a></p>
                             <p class="subtitle is-size-6 has-text-grey-light">
                                 Published at May 12, 2019 &middot;
@@ -141,9 +162,13 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
         
             <span class="tag"><a href="https://subineru.github.io/tags/game">game</a></span>
         
+            <span class="tag"><a href="https://subineru.github.io/tags/linux">linux</a></span>
+        
             <span class="tag"><a href="https://subineru.github.io/tags/pandas">pandas</a></span>
         
             <span class="tag"><a href="https://subineru.github.io/tags/python">python</a></span>
+        
+            <span class="tag"><a href="https://subineru.github.io/tags/shell">shell</a></span>
         
             <span class="tag"><a href="https://subineru.github.io/tags/timberman">timberman</a></span>
         
@@ -153,6 +178,9 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
         <div class="card">
     <div class="card-content">
         <h1 class="title is-5">Recent posts</h1>
+        
+            <h1><a href="https://subineru.github.io/post/2019/190824-brace-expansion/">初探 Linux 的大括號擴展(Brace expansion)</a></h1>
+            <time class="has-text-grey-light is-size-7">24 August 2019</time>
         
             <h1><a href="https://subineru.github.io/post/2019/190512-timberman/">Timberman 砍了1026個木頭</a></h1>
             <time class="has-text-grey-light is-size-7">12 May 2019</time>
@@ -166,9 +194,6 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
             <h1><a href="https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a></h1>
             <time class="has-text-grey-light is-size-7">7 April 2019</time>
         
-            <h1><a href="https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a></h1>
-            <time class="has-text-grey-light is-size-7">3 March 2019</time>
-        
     </div>
 </div>
     <br>
@@ -176,7 +201,7 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
     <div class="card-content">
         <h1 class="title is-5">Archives</h1>
         
-            <a href="https://subineru.github.io/archives/2019/index.html">2019</a> (5)<br>
+            <a href="https://subineru.github.io/archives/2019/index.html">2019</a> (6)<br>
         
     </div>
 </div>
