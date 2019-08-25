@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CJ Hung Blog</title>
-    <link>https://cjhung.tw/</link>
+    <link>https://subineru.github.io/</link>
     <description>Recent content on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sat, 24 Aug 2019 15:00:27 +0800</lastBuildDate>
     
-	<atom:link href="https://cjhung.tw/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://subineru.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>初探 Linux 的大括號擴展(Brace expansion)</title>
-      <link>https://cjhung.tw/post/2019/190824-brace-expansion/</link>
+      <link>https://subineru.github.io/post/2019/190824-brace-expansion/</link>
       <pubDate>Sat, 24 Aug 2019 15:00:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2019/190824-brace-expansion/</guid>
+      <guid>https://subineru.github.io/post/2019/190824-brace-expansion/</guid>
       <description>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
 而且產生的字串組合, 不一定要有實際檔案的存在,
 在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
@@ -29,28 +29,28 @@
     
     <item>
       <title>Timberman 砍了1026個木頭</title>
-      <link>https://cjhung.tw/post/2019/190512-timberman/</link>
+      <link>https://subineru.github.io/post/2019/190512-timberman/</link>
       <pubDate>Sun, 12 May 2019 13:55:18 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2019/190512-timberman/</guid>
+      <guid>https://subineru.github.io/post/2019/190512-timberman/</guid>
       <description>玩 timberman 來訓練反應, 等一定成績再來找其他遊戲玩</description>
     </item>
     
     <item>
       <title>Timberman 砍了767個木頭</title>
-      <link>https://cjhung.tw/post/2019/190511-timberman/</link>
+      <link>https://subineru.github.io/post/2019/190511-timberman/</link>
       <pubDate>Sat, 11 May 2019 17:00:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2019/190511-timberman/</guid>
+      <guid>https://subineru.github.io/post/2019/190511-timberman/</guid>
       <description></description>
     </item>
     
     <item>
       <title>練習 Python 100 Days(5)</title>
-      <link>https://cjhung.tw/post/2019/python-100days5/</link>
+      <link>https://subineru.github.io/post/2019/python-100days5/</link>
       <pubDate>Sat, 11 May 2019 17:00:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2019/python-100days5/</guid>
+      <guid>https://subineru.github.io/post/2019/python-100days5/</guid>
       <description>練習 Python 100 Days 前幾天的比較簡單, 就從第五天的練習題開始
 水仙花數(Narcissistic number) 用來描述一個 N 位非負數, 其中每個數字的 N 次方和等於該數字本身 代碼:
 for num in range(1000): squares = len(str(num)) count = 0 count = sum([int(x)**squares for x in str(num)]) if num == count: print(f&amp;quot;The Narcissistic number is : {count}&amp;quot; )  完美數(Perfect number) 用來描述一個數字, 除了自己以外的所有真因子的總和, 等於它自己, 就是完美數 代碼:
@@ -59,10 +59,10 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
     
     <item>
       <title>實數轉換成整數</title>
-      <link>https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</link>
+      <link>https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</link>
       <pubDate>Sun, 07 Apr 2019 15:29:29 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</guid>
+      <guid>https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</guid>
       <description>前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
 從 stackoverflow 看到有兩種解法
 &amp;gt;&amp;gt;&amp;gt; num1 = 1.0 &amp;gt;&amp;gt;&amp;gt; int(num1) 1 &amp;gt;&amp;gt;&amp;gt; num2 = 1.5 &amp;gt;&amp;gt;&amp;gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
@@ -71,10 +71,10 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
     
     <item>
       <title>使用 Pandas groupby 和 agg 合併資料</title>
-      <link>https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</link>
+      <link>https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</link>
       <pubDate>Sun, 03 Mar 2019 22:34:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</guid>
+      <guid>https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</guid>
       <description>前因 想要把下面 dataframe , 分類後合併在一起
 order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c  成為下面的 data format
 order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
@@ -83,10 +83,10 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
     
     <item>
       <title></title>
-      <link>https://cjhung.tw/archives/</link>
+      <link>https://subineru.github.io/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cjhung.tw/archives/</guid>
+      <guid>https://subineru.github.io/archives/</guid>
       <description>title: &amp;ldquo;歸檔&amp;rdquo; description: _ type: archives</description>
     </item>
     

@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CJ Hung Blog</title>
-    <link>https://cjhung.tw/tags/</link>
+    <link>https://subineru.github.io/tags/</link>
     <description>Recent content in Tags on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sat, 24 Aug 2019 15:00:27 +0800</lastBuildDate>
     
-	<atom:link href="https://cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://subineru.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux</title>
-      <link>https://cjhung.tw/tags/linux/</link>
+      <link>https://subineru.github.io/tags/linux/</link>
       <pubDate>Sat, 24 Aug 2019 15:00:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/tags/linux/</guid>
+      <guid>https://subineru.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shell</title>
-      <link>https://cjhung.tw/tags/shell/</link>
+      <link>https://subineru.github.io/tags/shell/</link>
       <pubDate>Sat, 24 Aug 2019 15:00:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/tags/shell/</guid>
+      <guid>https://subineru.github.io/tags/shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>game</title>
-      <link>https://cjhung.tw/tags/game/</link>
+      <link>https://subineru.github.io/tags/game/</link>
       <pubDate>Sun, 12 May 2019 13:55:18 +0800</pubDate>
       
-      <guid>https://cjhung.tw/tags/game/</guid>
+      <guid>https://subineru.github.io/tags/game/</guid>
       <description></description>
     </item>
     
     <item>
       <title>timberman</title>
-      <link>https://cjhung.tw/tags/timberman/</link>
+      <link>https://subineru.github.io/tags/timberman/</link>
       <pubDate>Sun, 12 May 2019 13:55:18 +0800</pubDate>
       
-      <guid>https://cjhung.tw/tags/timberman/</guid>
+      <guid>https://subineru.github.io/tags/timberman/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://cjhung.tw/tags/python/</link>
+      <link>https://subineru.github.io/tags/python/</link>
       <pubDate>Sat, 11 May 2019 17:00:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/tags/python/</guid>
+      <guid>https://subineru.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pandas</title>
-      <link>https://cjhung.tw/tags/pandas/</link>
+      <link>https://subineru.github.io/tags/pandas/</link>
       <pubDate>Sun, 03 Mar 2019 22:34:27 +0800</pubDate>
       
-      <guid>https://cjhung.tw/tags/pandas/</guid>
+      <guid>https://subineru.github.io/tags/pandas/</guid>
       <description></description>
     </item>
     
