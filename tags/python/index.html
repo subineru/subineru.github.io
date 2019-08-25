@@ -16,13 +16,13 @@
     <meta name="description" content="python">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://subineru.github.io/tags/python/">
+    <meta property="og:url" content="https://cjhung.tw/tags/python/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="https://subineru.github.io/tags/python/index.xml" title="CJ Hung Blog" />
+    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/tags/python/index.xml" title="CJ Hung Blog" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -39,7 +39,7 @@
         <div class="col-group">
             <div class="site-name ">
                 
-                    <a id="logo" href="https://subineru.github.io/">
+                    <a id="logo" href="https://cjhung.tw/">
                         CJ Hung Blog
                     </a>
                 
@@ -47,9 +47,9 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://subineru.github.io/">首頁</a>
+                    <a class="" href="https://cjhung.tw/">首頁</a>
                     
-                    <a  href="https://subineru.github.io/archives/" title="歸檔">歸檔</a>
+                    <a  href="https://cjhung.tw/archives/" title="歸檔">歸檔</a>
                     
                 </nav>
             </div>
@@ -76,7 +76,7 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://subineru.github.io/post/2019/python-100days5/">練習 Python 100 Days(5)</a>
+                                    <a href="https://cjhung.tw/post/2019/python-100days5/">練習 Python 100 Days(5)</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -88,14 +88,14 @@
 水仙花數(Narcissistic number) 用來描述一個 N 位非負數, 其中每個數字的 N 次方和等於該數字本身 代碼:
 for num in range(1000): squares = len(str(num)) count = 0 count = sum([int(x)**squares for x in str(num)]) if num == count: print(f&quot;The Narcissistic number is : {count}&quot; )  完美數(Perfect number) 用來描述一個數字, 除了自己以外的所有真因子的總和, 等於它自己, 就是完美數 代碼:
 for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [] and sum(list) == num: print(num)  參考: Python-100-Days - Day5……
-                                <p class="readmore"><a href="https://subineru.github.io/post/2019/python-100days5/">阅读全文</a></p>
+                                <p class="readmore"><a href="https://cjhung.tw/post/2019/python-100days5/">阅读全文</a></p>
                             </div>
                         </article>
                     
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a>
+                                    <a href="https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -107,14 +107,14 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
 從 stackoverflow 看到有兩種解法
 &gt;&gt;&gt; num1 = 1.0 &gt;&gt;&gt; int(num1) 1 &gt;&gt;&gt; num2 = 1.5 &gt;&gt;&gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
 &gt;&gt;&gt; (1.0).is_integer() True &gt;&gt;&gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; AttributeError: 'int' object has no attribute 'is_integer' &gt;&gt;&gt; (1.5).is_integer() False &gt;&gt;&gt; (0.9999999999 ).is_integer() False &gt;&gt;&gt; data = [1.……
-                                <p class="readmore"><a href="https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">阅读全文</a></p>
+                                <p class="readmore"><a href="https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">阅读全文</a></p>
                             </div>
                         </article>
                     
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a>
+                                    <a href="https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
@@ -126,7 +126,7 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
 order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c  成為下面的 data format
 order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
 &gt;&gt;&gt;f1 = lambda x: &quot;, &quot;.join(x.dropna()) &gt;&gt;&gt;f1(data.abbr) 'm, c, d, c' &gt;&gt;&gt;f2 = lambda x: [z for y in x for z in y] &gt;&gt;&gt;f2(data.……
-                                <p class="readmore"><a href="https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">阅读全文</a></p>
+                                <p class="readmore"><a href="https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">阅读全文</a></p>
                             </div>
                         </article>
                     
@@ -146,7 +146,7 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
         <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
-      <input type="hidden" name="sitesearch" value="https://subineru.github.io/">
+      <input type="hidden" name="sitesearch" value="https://cjhung.tw/">
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
@@ -156,27 +156,27 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
 <ul class="widget-list">
     
     <li>
-        <a href="https://subineru.github.io/post/2019/190824-brace-expansion/" title="初探 Linux 的大括號擴展(Brace expansion)">初探 Linux 的大括號擴展(Brace expansion)</a>
+        <a href="https://cjhung.tw/post/2019/190824-brace-expansion/" title="初探 Linux 的大括號擴展(Brace expansion)">初探 Linux 的大括號擴展(Brace expansion)</a>
     </li>
     
     <li>
-        <a href="https://subineru.github.io/post/2019/190512-timberman/" title="Timberman 砍了1026個木頭">Timberman 砍了1026個木頭</a>
+        <a href="https://cjhung.tw/post/2019/190512-timberman/" title="Timberman 砍了1026個木頭">Timberman 砍了1026個木頭</a>
     </li>
     
     <li>
-        <a href="https://subineru.github.io/post/2019/190511-timberman/" title="Timberman 砍了767個木頭">Timberman 砍了767個木頭</a>
+        <a href="https://cjhung.tw/post/2019/190511-timberman/" title="Timberman 砍了767個木頭">Timberman 砍了767個木頭</a>
     </li>
     
     <li>
-        <a href="https://subineru.github.io/post/2019/python-100days5/" title="練習 Python 100 Days(5)">練習 Python 100 Days(5)</a>
+        <a href="https://cjhung.tw/post/2019/python-100days5/" title="練習 Python 100 Days(5)">練習 Python 100 Days(5)</a>
     </li>
     
     <li>
-        <a href="https://subineru.github.io/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/" title="實數轉換成整數">實數轉換成整數</a>
+        <a href="https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/" title="實數轉換成整數">實數轉換成整數</a>
     </li>
     
     <li>
-        <a href="https://subineru.github.io/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/" title="使用 Pandas groupby 和 agg 合併資料">使用 Pandas groupby 和 agg 合併資料</a>
+        <a href="https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/" title="使用 Pandas groupby 和 agg 合併資料">使用 Pandas groupby 和 agg 合併資料</a>
     </li>
     
 </ul>
@@ -197,17 +197,17 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
         <h3 class="widget-title">標籤</h3>
 <div class="tagcloud">
     
-    <a href="https://subineru.github.io/tags/game/">game</a>
+    <a href="https://cjhung.tw/tags/game/">game</a>
     
-    <a href="https://subineru.github.io/tags/linux/">linux</a>
+    <a href="https://cjhung.tw/tags/linux/">linux</a>
     
-    <a href="https://subineru.github.io/tags/pandas/">pandas</a>
+    <a href="https://cjhung.tw/tags/pandas/">pandas</a>
     
-    <a href="https://subineru.github.io/tags/python/">python</a>
+    <a href="https://cjhung.tw/tags/python/">python</a>
     
-    <a href="https://subineru.github.io/tags/shell/">shell</a>
+    <a href="https://cjhung.tw/tags/shell/">shell</a>
     
-    <a href="https://subineru.github.io/tags/timberman/">timberman</a>
+    <a href="https://cjhung.tw/tags/timberman/">timberman</a>
     
 </div>
 
@@ -219,7 +219,7 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
     <section class="widget">
         <h3 class="widget-title">其它</h3>
         <ul class="widget-list">
-            <li><a href="https://subineru.github.io/index.xml">文章 RSS</a></li>
+            <li><a href="https://cjhung.tw/index.xml">文章 RSS</a></li>
         </ul>
     </section>
 </div>
@@ -229,7 +229,7 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  �
 </div>
 <footer id="footer">
     <div class="container">
-        &copy; 2019 <a href="https://subineru.github.io/">CJ Hung Blog By CJ Hung</a>.
+        &copy; 2019 <a href="https://cjhung.tw/">CJ Hung Blog By CJ Hung</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
         
