@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on CJ Hung Blog</title>
-    <link>https://subineru.github.io/tags/linux/</link>
+    <link>https://cjhung.tw/tags/linux/</link>
     <description>Recent content in linux on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sat, 24 Aug 2019 15:00:27 +0800</lastBuildDate>
     
-	<atom:link href="https://subineru.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cjhung.tw/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>初探 Linux 的大括號擴展(Brace expansion)</title>
-      <link>https://subineru.github.io/post/2019/190824-brace-expansion/</link>
+      <link>https://cjhung.tw/post/2019/190824-brace-expansion/</link>
       <pubDate>Sat, 24 Aug 2019 15:00:27 +0800</pubDate>
       
-      <guid>https://subineru.github.io/post/2019/190824-brace-expansion/</guid>
+      <guid>https://cjhung.tw/post/2019/190824-brace-expansion/</guid>
       <description>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
 而且產生的字串組合, 不一定要有實際檔案的存在,
 在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
