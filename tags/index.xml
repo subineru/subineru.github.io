@@ -6,10 +6,19 @@
     <description>Recent content in Tags on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 24 Aug 2019 15:00:27 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 21:00:18 +0800</lastBuildDate>
     
 	<atom:link href="https://cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>單車</title>
+      <link>https://cjhung.tw/tags/%E5%96%AE%E8%BB%8A/</link>
+      <pubDate>Sat, 31 Aug 2019 21:00:18 +0800</pubDate>
+      
+      <guid>https://cjhung.tw/tags/%E5%96%AE%E8%BB%8A/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>linux</title>
