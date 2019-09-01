@@ -20,7 +20,12 @@
       <description>路線概要: 新北大道 ➙ 泰林路 ➙ 大科路➙ 忠孝路 ➙ 文化北路一段 ➙ 南勢街 ➙ 山林路 ➙ 南山路 ➙ 泉州路 ➙ 大吉路 ➙ 蘆竹大吉山 ➙ 市道106號 ➙ 濱海公路 ➙ 河濱 ➙ 社子 ➙ 大稻埕碼頭
 從泰林路轉進大科路會遇到 20% 左右的坡度，爬起來會有點吃力以外，大部分都是不困難的路線．從濱海公路開始的回程，就會遭遇逆風，但是騎起來不太有壓力．
 距離 69 km 海拔 590 m GPX 下載
-約騎難度分級：(1) (1)★ (2)★★ (3)★★★ (4)★★★★ (5)★★★★★
+約騎難度分級：(1)
+(1)★
+(2)★★
+(3)★★★
+(4)★★★★
+(5)★★★★★
 大古山入口
 大古山福山宮
 社子島</description>
@@ -94,15 +99,6 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
 order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c  成為下面的 data format
 order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
 &amp;gt;&amp;gt;&amp;gt;f1 = lambda x: &amp;quot;, &amp;quot;.join(x.dropna()) &amp;gt;&amp;gt;&amp;gt;f1(data.abbr) &#39;m, c, d, c&#39; &amp;gt;&amp;gt;&amp;gt;f2 = lambda x: [z for y in x for z in y] &amp;gt;&amp;gt;&amp;gt;f2(data.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cjhung.tw/archives/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cjhung.tw/archives/</guid>
-      <description>title: &amp;ldquo;歸檔&amp;rdquo; description: _ type: archives</description>
     </item>
     
   </channel>
