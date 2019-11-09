@@ -1,46 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://cjhung.tw/post/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cjhung.tw/categories/2019/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/archives/2019/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/archives/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/categories/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/tags/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cjhung.tw/post/2019/191101-%E4%B8%80%E6%97%A5%E5%8C%97%E9%AB%98/</loc>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/tags/%E5%96%AE%E8%BB%8A/</loc>
-    <lastmod>2019-08-31T21:00:18+08:00</lastmod>
+    <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CJ Hung Blog</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Categories on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 31 Aug 2019 21:00:18 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 18:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://cjhung.tw/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>2019</title>
       <link>https://cjhung.tw/categories/2019/</link>
-      <pubDate>Sat, 31 Aug 2019 21:00:18 +0800</pubDate>
+      <pubDate>Sat, 02 Nov 2019 18:00:00 +0800</pubDate>
       
       <guid>https://cjhung.tw/categories/2019/</guid>
       <description></description>

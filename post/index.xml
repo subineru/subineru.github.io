@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CJ Hung Blog</title>
@@ -6,10 +6,21 @@
     <description>Recent content on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 31 Aug 2019 21:00:18 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 18:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://cjhung.tw/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一日北高 360 KM ; 爬升 817 M </title>
+      <link>https://cjhung.tw/post/2019/191101-%E4%B8%80%E6%97%A5%E5%8C%97%E9%AB%98/</link>
+      <pubDate>Sat, 02 Nov 2019 18:00:00 +0800</pubDate>
+      
+      <guid>https://cjhung.tw/post/2019/191101-%E4%B8%80%E6%97%A5%E5%8C%97%E9%AB%98/</guid>
+      <description>路線概要: 八里(起點)訊塘廣場 ➙ 蘆竹(台15接台61) ➙ 觀音 ➙ 新豐(台61接回台15 ) ➙ 新竹香山站 ➙ 竹南 ➙ 白沙屯(台61轉台1) ➙ 通宵(台1) ➙ 苑裡龍德家商(台1右轉接台61) ➙ 大甲(台61) ➙ 清水 ➙ 龍井(台61接台17) ➙ 中彰大橋 ➙ 伸港 ➙ 鹿港(台17) ➙ 彰化 彰濱站(第2檢查點) ➙ 芳苑 ➙ 麥寮(台17) ➙ 台西 ➙ 東石(台17) ➙ 布袋(台17) ➙ 台南南鯤鯓站 ➙ 七股 ➙ 安平(台17) ➙ 茄萣(台17) ➙ 永安 ➙ 梓官 ➙ 左營(台17) ➙ 屏山國小 終點
+距離 360 km 海拔 817 m GPX 下載
+約騎難度分級：(4)</description>
+    </item>
     
     <item>
       <title>蘆竹大古山  69 KM ; 爬升 590 M </title>

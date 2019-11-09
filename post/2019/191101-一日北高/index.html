@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>初探 Linux 的大括號擴展(Brace expansion) | CJ Hung Blog</title>
-    <meta property="og:title" content="初探 Linux 的大括號擴展(Brace expansion) - CJ Hung Blog">
+    <title>一日北高 360 KM ; 爬升 817 M  | CJ Hung Blog</title>
+    <meta property="og:title" content="一日北高 360 KM ; 爬升 817 M  - CJ Hung Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content="2019-08-24T15:00:27&#43;08:00">
+    <meta property="article:published_time" content="2019-11-02T18:00:00&#43;08:00">
         
         
-    <meta property="article:modified_time" content="2019-08-24T15:00:27&#43;08:00">
+    <meta property="article:modified_time" content="2019-11-02T18:00:00&#43;08:00">
         
     <meta name="Keywords" content="">
-    <meta name="description" content="初探 Linux 的大括號擴展(Brace expansion)">
+    <meta name="description" content="一日北高 360 KM ; 爬升 817 M ">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://cjhung.tw/post/2019/190824-brace-expansion/">
+    <meta property="og:url" content="https://cjhung.tw/post/2019/191101-%E4%B8%80%E6%97%A5%E5%8C%97%E9%AB%98/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -64,119 +64,6 @@
 
 <div id="body">
         
-        <div id="virtual_toc_list" style="display: none">
-            <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#逗號">逗號</a></li>
-<li><a href="#句號">句號</a></li>
-<li><a href="#複雜的使用方式">複雜的使用方式</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-        </div>
-        <div id="float_toc_div" style="margin: 10px;border: 1px solid gray;z-index:99999;display: none;">
-            <header style="background-color: #f3f3f3;color: black;border-bottom: 1px solid gray;padding: 10px 10px 10px 10px;">
-                <strong id="toc_btn_open" style="color: black;font-size: large;">目录</strong>
-                <strong id="toc_btn_close" style="color: black;font-size: large;float: right">╳</strong>
-            </header>
-            <div id="toc_list" style="background-color: #f3f3f3;color: black;padding: 10px;">
-        
-            </div>
-        </div>
-        <style type="text/css">
-            #float_toc_div {
-                position: fixed;
-                display: none;
-                 
-                height: auto;
-                font-size: 13px;
-            }
-        
-            #toc_list a:hover,
-            #toc_list a:active {
-                color: #ba3925;
-            }
-        </style>
-        <script>
-            window.onload = function () {
-                let tocNavElem = document.getElementById("TableOfContents");
-                let floatTocDivElem = document.getElementById("float_toc_div");
-                let tocListElem = floatTocDivElem.getElementsByTagName('div')[0];
-                let colGroupElem = document.getElementById("body").getElementsByClassName("col-group")[0]
-                let floatTocWidth = (document.body.clientWidth - colGroupElem.offsetWidth) / 2 - 16;
-                var useFloatToc = false;
-
-                if (floatTocWidth >= 100) {
-                    useFloatToc = true;
-                    document.getElementById("toc_list").appendChild(tocNavElem);
-                    floatTocDivElem.style.display = 'block';
-                    floatTocDivElem.style.width = floatTocWidth + 'px';
-                    top();
-                    floatTocDivElem.style.left = '0px';
-
-                    function top() {
-                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
-                            floatTocDivElem.style.top = '0px';
-                        } else {
-                            floatTocDivElem.style.top = window.innerHeight / 9 + 'px';
-                        }
-                    }
-
-                    function ishide() {
-                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
-                            floatTocDivElem.style.top = '0px';
-                        } else {
-                            floatTocDivElem.style.display = 'block';
-                        }
-                    }
-
-                    window.onscroll = function () {
-                        ishide();
-                        if ((document.documentElement.scrollTop != 0) && (floatTocDivElem.style.display == 'block')) {
-                            top();
-                        }
-                    };
-
-                    window.onresize = function () {
-                        ishide();
-                    }
-
-                    document.getElementById("toc_btn_open").addEventListener('click', function () {
-                        switch (tocListElem.style.display) {
-                            case "none":
-                                document.getElementById("toc_btn_close").style.display = "";
-                                tocListElem.style.display = "";
-                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "1px solid gray";
-                                break;
-                            default:
-                                break;
-                        }
-                    }, false);
-
-                    document.getElementById("toc_btn_close").addEventListener('click', function () {
-                        switch (tocListElem.style.display) {
-                            case "":
-                                document.getElementById("toc_btn_close").style.display = "none";
-                                tocListElem.style.display = "none";
-                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "";
-                                break;
-                            default:
-                                break;
-                        }
-                    }, false);
-                } else {
-                    let fixedTocElem = document.getElementsByClassName("toc-article")[0];
-                    fixedTocElem.appendChild(tocNavElem);
-                    fixedTocElem.parentElement.style.display = "";
-                }
-                document.getElementById("virtual_toc_list").remove();
-            };   
-        </script>
         
     <div class="container">
         <div class="col-group">
@@ -185,10 +72,10 @@
                 <div class="res-cons">
                     <article class="post">
                         <header>
-                            <h1 class="post-title">初探 Linux 的大括號擴展(Brace expansion)</h1>
+                            <h1 class="post-title">一日北高 360 KM ; 爬升 817 M </h1>
                         </header>
                         <date class="post-meta meta-date">
-                            2019年8月24日
+                            2019年11月2日
                         </date>
                         
                         <div class="post-meta">
@@ -200,65 +87,29 @@
                         
                         
                         
-                        <div class="clear" style="display: none">
-                            <div class="toc-article">
-                                <div class="toc-title">文章目录</div>
-                            </div>
-                        </div>
-                        
                         <div class="post-content">
-                            
+                            <p>路線概要:  八里(起點)訊塘廣場 ➙ 蘆竹(台15接台61) ➙ 觀音 ➙ 新豐(台61接回台15 ) ➙ 新竹香山站 ➙ 竹南 ➙  白沙屯(台61轉台1) ➙  通宵(台1) ➙ 苑裡龍德家商(台1右轉接台61) ➙ 大甲(台61) ➙ 清水 ➙ 龍井(台61接台17) ➙  中彰大橋 ➙  伸港 ➙ 鹿港(台17) ➙ 彰化 彰濱站(第2檢查點) ➙ 芳苑 ➙ 麥寮(台17) ➙ 台西 ➙  東石(台17) ➙  布袋(台17) ➙ 台南南鯤鯓站 ➙ 七股 ➙ 安平(台17) ➙ 茄萣(台17) ➙ 永安 ➙ 梓官 ➙ 左營(台17) ➙ 屏山國小 終點</p>
 
-<p>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,</p>
+<p>距離 360 km
+海拔 817 m
+<img src="/../191101_一日北高.assets/image-20191109140301992.png" alt="image-20191109140301992" />
+<a href=".191101_一日北高.assetsns360.gpx">GPX 下載</a></p>
 
-<p>而且產生的字串組合, 不一定要有實際檔案的存在,</p>
+<p>約騎難度分級：(4)<br />
+(1)★ <br />
+(2)★★\
+(3)★★★<br />
+(4)★★★★<br />
+(5)★★★★★</p>
 
-<p>在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt</p>
+<p>參加贈送的車衣
+<img src="/../191101_一日北高.assets/P_20191101_121512_vHDR_Auto.jpg" alt="P_20191101_121512_vHDR_Auto" /></p>
 
-<pre><code class="language-shell"># echo foo{1,2}.txt
-foo1.txt foo2.txt
-# cp -v foo{1,2}.txt
-'foo1.txt' -&gt; 'foo2.txt'
-</code></pre>
+<p>比賽的起點八里(起點)訊塘廣場，2019/11/01 0:00
+<img src="/../191101_一日北高.assets/P_20191102_000557_vHDR_Auto.jpg" alt="P_20191102_000557_vHDR_Auto" style="zoom: 50%;" /></p>
 
-<p>大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,</p>
-
-<p>逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串</p>
-
-<h3 id="逗號">逗號</h3>
-
-<p>使用範例</p>
-
-<pre><code class="language-shell"># echo file{,1,2}
-file file1 file2
-# mkdir -v file{,1,2}
-mkdir: created directory 'file'
-mkdir: created directory 'file1'
-mkdir: created directory 'file2'
-
-</code></pre>
-
-<h3 id="句號">句號</h3>
-
-<p>使用範例</p>
-
-<pre><code class="language-shell"># echo file{1..5}
-file1 file2 file3 file4 file5
-# mkdir -v file{1..5}
-mkdir: created directory 'file1'
-mkdir: created directory 'file2'
-mkdir: created directory 'file3'
-mkdir: created directory 'file4'
-mkdir: created directory 'file5'
-</code></pre>
-
-<h3 id="複雜的使用方式">複雜的使用方式</h3>
-
-<p>在一個字串中同時放很多個大括號擴展</p>
-
-<pre><code class="language-shell"># echo {apache,nginx}-{index,default}-0{1..2}.html
-apache-index-01.html apache-index-02.html apache-default-01.html apache-default-02.html nginx-index-01.html nginx-index-02.html nginx-default-01.html nginx-default-02.html
-</code></pre>
+<p>完賽獎盃
+<img src="/../191101_一日北高.assets/P_20191109_142214_vHDR_Auto.jpg" alt="P_20191109_142214_vHDR_Auto" /></p>
 
                         </div>
 
@@ -266,15 +117,22 @@ apache-index-01.html apache-index-02.html apache-default-01.html apache-default-
 
 
                         
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/2019/190831-%E5%A4%A7%E5%8F%A4%E5%B1%B1/">蘆竹大古山  69 KM ; 爬升 590 M </a></li>
+        
+    </ul>
+</div>
 
 
                         <div class="post-meta meta-tags">
                             
                             <ul class="clearfix">
                                 
-                                <li><a href="https://cjhung.tw/tags/linux">linux</a></li>
-                                
-                                <li><a href="https://cjhung.tw/tags/shell">shell</a></li>
+                                <li><a href="https://cjhung.tw/tags/%E5%96%AE%E8%BB%8A">單車</a></li>
                                 
                             </ul>
                             
