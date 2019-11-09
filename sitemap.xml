@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cjhung.tw/post/</loc>
+    <loc>https://cjhung.tw/post/2019/</loc>
     <lastmod>2019-11-09T20:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -126,6 +126,10 @@
   <url>
     <loc>https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</loc>
     <lastmod>2019-03-03T22:34:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cjhung.tw/post/</loc>
   </url>
   
 </urlset>
