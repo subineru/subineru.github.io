@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>實數轉換成整數 | CJ Hung Blog</title>
-    <meta property="og:title" content="實數轉換成整數 - CJ Hung Blog">
+    <title>[食記]百魚鮮食屋 | CJ Hung Blog</title>
+    <meta property="og:title" content="[食記]百魚鮮食屋 - CJ Hung Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content="2019-04-07T15:29:29&#43;08:00">
+    <meta property="article:published_time" content="2019-11-09T20:00:00&#43;08:00">
         
         
-    <meta property="article:modified_time" content="2019-04-07T15:29:29&#43;08:00">
+    <meta property="article:modified_time" content="2019-11-09T20:00:00&#43;08:00">
         
     <meta name="Keywords" content="">
-    <meta name="description" content="實數轉換成整數">
+    <meta name="description" content="[食記]百魚鮮食屋">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">
+    <meta property="og:url" content="https://cjhung.tw/post/2019/191109-%E7%99%BE%E9%AD%9A%E9%AE%AE%E9%A3%9F%E5%B1%8B/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -72,10 +72,10 @@
                 <div class="res-cons">
                     <article class="post">
                         <header>
-                            <h1 class="post-title">實數轉換成整數</h1>
+                            <h1 class="post-title">[食記]百魚鮮食屋</h1>
                         </header>
                         <date class="post-meta meta-date">
-                            2019年4月7日
+                            2019年11月9日
                         </date>
                         
                         <div class="post-meta">
@@ -88,60 +88,29 @@
                         
                         
                         <div class="post-content">
-                            
+                            <p><img src="post/191109-百魚鮮食屋/P_20191107_173744_vHDR_Auto_HP.jpg" alt="P_20191107_173744_vHDR_Auto_HP" /></p>
 
-<h1 id="前言">前言</h1>
+<p>位在捷運西湖站一號出口下，步行約四分鐘即可到達，鄰近有西湖市場 、西湖國小</p>
 
-<p>​   使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,</p>
+<p>價格還算可以，在 Google 地圖至少有 600 位顧客給予 4.5 顆星以上的評價</p>
 
-<p>從 stackoverflow 看到有兩種解法</p>
+<p><img src="post/191109-百魚鮮食屋/image-20191109220340229.png" alt="image-20191109220340229" /></p>
 
-<pre><code class="language-python">&gt;&gt;&gt; num1 = 1.0
-&gt;&gt;&gt; int(num1)
-1
-&gt;&gt;&gt; num2 = 1.5
-&gt;&gt;&gt; int(num2)
-1
-</code></pre>
+<p>百魚鮮食屋在門口處擺放的菜單
+<img src="post/191109-百魚鮮食屋/P_20191107_173807_vHDR_Auto.jpg" alt="P_20191107_173807_vHDR_Auto" /></p>
 
-<h1 id="解法一">解法一</h1>
+<p>壽司檯前有坐位可以直接看師傅，正在切等等就要入口的生魚片
+<img src="post/191109-百魚鮮食屋/P_20191107_174038_vHDR_Auto_HP.jpg" alt="P_20191107_174038_vHDR_Auto_HP" /></p>
 
-<p>​   使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換</p>
+<p>我點了鮭魚親子丼
+魚卵咬下去，甜甜的滋味在嘴裡化開非常好吃
+鮭魚也相當軟嫩，下層的海苔配飯很適合，一口接一口很快就吃完
+<img src="post/191109-百魚鮮食屋/P_20191107_174152_vHDR_Auto.jpg" alt="P_20191107_174152_vHDR_Auto" /></p>
 
-<pre><code class="language-python">&gt;&gt;&gt; (1.0).is_integer()
-True
-&gt;&gt;&gt; (1).is_integer()       ### 缺點是已經是整數的變數, 會跳錯
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-AttributeError: 'int' object has no attribute 'is_integer'
-&gt;&gt;&gt; (1.5).is_integer()
-False
-&gt;&gt;&gt; (0.9999999999 ).is_integer()
-False
-&gt;&gt;&gt; data = [1.0, 1, 1.5, 0.9999999999]
-&gt;&gt;&gt; print(list(map(lambda x: int(x) if int(x) == x else x, data)))   ### 運用 lambda 的特性可以避免例外
-[1, 1, 1.5, 0.9999999999]
-</code></pre>
-
-<h1 id="解法二">解法二</h1>
-
-<p>​   使用 &lsquo;%g&rsquo;` (&ldquo;General Format) 處理</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; &gt;&gt;&gt; '%g' % 1.0
-'1'
-&gt;&gt;&gt; '%g' % 1
-'1'
-&gt;&gt;&gt; '%g' % 1.5
-'1.5'
-&gt;&gt;&gt; '%g' % 0.9999999999      ### 缺點是趨近於 1 的數值仍然會被捨去
-'1'
-&gt;&gt;&gt; '%.10g' % 0.9999999999   ### 調高格式化的長度
-'0.9999999999'
-</code></pre>
-
-<h1 id="reference">Reference</h1>
-
-<p>​    <a href="https://stackoverflow.com/questions/55510485/python-return-float-1-0-as-int-1-but-float-1-5-as-float-1-5">Python: return float 1.0 as int 1 but float 1.5 as float 1.5</a>]</p>
+<p>味增湯的料相當的多，可惜我沒有拍好
+有蝦子、蛤蜊 、嫩豆腐等等等，吃完相當有飽足感
+聽說喝不夠可以在續，但我吃完已經相當的飽了
+<img src="post/191109-百魚鮮食屋/P_20191107_174157_vHDR_Auto.jpg" alt="P_20191107_174157_vHDR_Auto" /></p>
 
                         </div>
 
@@ -150,21 +119,14 @@ False
 
                         
 
-<div class="post-archive">
-    <h2>See Also</h2>
-    <ul class="listing">
-        
-        <li><a href="/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a></li>
-        
-    </ul>
-</div>
-
 
                         <div class="post-meta meta-tags">
                             
                             <ul class="clearfix">
                                 
-                                <li><a href="https://cjhung.tw/tags/python">python</a></li>
+                                <li><a href="https://cjhung.tw/tags/%E9%A3%9F%E8%A8%98">食記</a></li>
+                                
+                                <li><a href="https://cjhung.tw/tags/%E5%8F%B0%E5%8C%97">台北</a></li>
                                 
                             </ul>
                             
