@@ -13,8 +13,8 @@
       <pubDate>Tue, 10 May 2022 21:00:00 +0800</pubDate>
       
       <guid>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</guid>
-      <description>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行
-import pandas as pdimport numpy as npdf = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;))df如下圖我們可以修改參數為 None，就會顯示所有的行數，不再限制。
+      <description>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行。
+import pandas as pdimport numpy as npdf = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;))df修改參數為 None 之後，就會顯示所有的行數，不再只顯示 20 行。
 pd.set_option(&amp;quot;display.max.columns&amp;quot;, None)df</description>
     </item>
     

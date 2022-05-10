@@ -88,14 +88,14 @@
                         
                         
                         <div class="post-content">
-                            <p>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行</p>
+                            <p>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行。</p>
 <pre><code class="language-code" data-lang="code">import pandas as pd
 import numpy as np
 
 df = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
 df
 </code></pre><p><img src="./Snipaste_2022-05-11_00-10-53.jpg" alt=""></p>
-<p>如下圖我們可以修改參數為 None，就會顯示所有的行數，不再限制。</p>
+<p>修改參數為 None 之後，就會顯示所有的行數，不再只顯示 20 行。</p>
 <pre><code class="language-code" data-lang="code">pd.set_option(&quot;display.max.columns&quot;, None)
 df
 </code></pre><p><img src="./Snipaste_2022-05-11_00-11-57.jpg" alt=""></p>
