@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2019 on CJ Hung Blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 2019 on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 09 Nov 2019 20:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://cjhung.tw/categories/2019/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 09 Nov 2019 20:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/categories/2019/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[食記]百魚鮮食屋</title>
       <link>https://cjhung.tw/post/2019/191109-%E7%99%BE%E9%AD%9A%E9%AE%AE%E9%A3%9F%E5%B1%8B/</link>
@@ -54,7 +50,7 @@
 (2)★★
 (3)★★★
 (4)★★★★
-(5)★★★★★
+(5)★★★★★\
 大古山入口
 大古山福山宮
 社子島</description>
@@ -69,10 +65,10 @@
       <description>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
 而且產生的字串組合, 不一定要有實際檔案的存在,
 在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
-# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &#39;foo1.txt&#39; -&amp;gt; &#39;foo2.txt&#39;  大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
+# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &amp;#39;foo1.txt&amp;#39; -&amp;gt; &amp;#39;foo2.txt&amp;#39; 大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
 逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
 逗號 使用範例
-# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &#39;file&#39; mkdir: created directory &#39;file1&#39; mkdir: created directory &#39;file2&#39;  句號 使用範例
+# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &amp;#39;file&amp;#39; mkdir: created directory &amp;#39;file1&amp;#39; mkdir: created directory &amp;#39;file2&amp;#39; 句號 使用範例
 # echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1.</description>
     </item>
     
@@ -102,8 +98,8 @@
       <guid>https://cjhung.tw/post/2019/python-100days5/</guid>
       <description>練習 Python 100 Days 前幾天的比較簡單, 就從第五天的練習題開始
 水仙花數(Narcissistic number) 用來描述一個 N 位非負數, 其中每個數字的 N 次方和等於該數字本身 代碼:
-for num in range(1000): squares = len(str(num)) count = 0 count = sum([int(x)**squares for x in str(num)]) if num == count: print(f&amp;quot;The Narcissistic number is : {count}&amp;quot; )  完美數(Perfect number) 用來描述一個數字, 除了自己以外的所有真因子的總和, 等於它自己, 就是完美數 代碼:
-for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [] and sum(list) == num: print(num)  參考: Python-100-Days - Day5</description>
+for num in range(1000): squares = len(str(num)) count = 0 count = sum([int(x)**squares for x in str(num)]) if num == count: print(f&amp;#34;The Narcissistic number is : {count}&amp;#34; ) 完美數(Perfect number) 用來描述一個數字, 除了自己以外的所有真因子的總和, 等於它自己, 就是完美數 代碼:
+for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [] and sum(list) == num: print(num) 參考: Python-100-Days - Day5</description>
     </item>
     
     <item>
@@ -112,10 +108,10 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
       <pubDate>Sun, 07 Apr 2019 15:29:29 +0800</pubDate>
       
       <guid>https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</guid>
-      <description>前言 ​ 使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
+      <description>前言 ​	使用 int() 函式做數值轉換, 會遇到小數點以下有值時, 會被無條件捨去的困擾,
 從 stackoverflow 看到有兩種解法
-&amp;gt;&amp;gt;&amp;gt; num1 = 1.0 &amp;gt;&amp;gt;&amp;gt; int(num1) 1 &amp;gt;&amp;gt;&amp;gt; num2 = 1.5 &amp;gt;&amp;gt;&amp;gt; int(num2) 1  解法一 ​ 使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
-&amp;gt;&amp;gt;&amp;gt; (1.0).is_integer() True &amp;gt;&amp;gt;&amp;gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; AttributeError: &#39;int&#39; object has no attribute &#39;is_integer&#39; &amp;gt;&amp;gt;&amp;gt; (1.5).is_integer() False &amp;gt;&amp;gt;&amp;gt; (0.9999999999 ).is_integer() False &amp;gt;&amp;gt;&amp;gt; data = [1.</description>
+&amp;gt;&amp;gt;&amp;gt; num1 = 1.0 &amp;gt;&amp;gt;&amp;gt; int(num1) 1 &amp;gt;&amp;gt;&amp;gt; num2 = 1.5 &amp;gt;&amp;gt;&amp;gt; int(num2) 1 解法一 ​	使用 is_integer() 函式配合 if 判斷是否為整數, 是才做 int() 轉換
+&amp;gt;&amp;gt;&amp;gt; (1.0).is_integer() True &amp;gt;&amp;gt;&amp;gt; (1).is_integer() ### 缺點是已經是整數的變數, 會跳錯 Traceback (most recent call last): File &amp;#34;&amp;lt;stdin&amp;gt;&amp;#34;, line 1, in &amp;lt;module&amp;gt; AttributeError: &amp;#39;int&amp;#39; object has no attribute &amp;#39;is_integer&amp;#39; &amp;gt;&amp;gt;&amp;gt; (1.5).is_integer() False &amp;gt;&amp;gt;&amp;gt; (0.9999999999 ).is_integer() False &amp;gt;&amp;gt;&amp;gt; data = [1.</description>
     </item>
     
     <item>
@@ -125,9 +121,9 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
       
       <guid>https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</guid>
       <description>前因 想要把下面 dataframe , 分類後合併在一起
-order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c  成為下面的 data format
-order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d]  先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
-&amp;gt;&amp;gt;&amp;gt;f1 = lambda x: &amp;quot;, &amp;quot;.join(x.dropna()) &amp;gt;&amp;gt;&amp;gt;f1(data.abbr) &#39;m, c, d, c&#39; &amp;gt;&amp;gt;&amp;gt;f2 = lambda x: [z for y in x for z in y] &amp;gt;&amp;gt;&amp;gt;f2(data.</description>
+order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c 成為下面的 data format
+order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d] 先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
+&amp;gt;&amp;gt;&amp;gt;f1 = lambda x: &amp;#34;, &amp;#34;.join(x.dropna()) &amp;gt;&amp;gt;&amp;gt;f1(data.abbr) &amp;#39;m, c, d, c&amp;#39; &amp;gt;&amp;gt;&amp;gt;f2 = lambda x: [z for y in x for z in y] &amp;gt;&amp;gt;&amp;gt;f2(data.</description>
     </item>
     
   </channel>

@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell on CJ Hung Blog</title>
+    <title>shell on CJ Hung Blog</title>
     <link>https://cjhung.tw/tags/shell/</link>
-    <description>Recent content in Shell on CJ Hung Blog</description>
+    <description>Recent content in shell on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 24 Aug 2019 15:00:27 +0800</lastBuildDate>
-    
-	<atom:link href="https://cjhung.tw/tags/shell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 24 Aug 2019 15:00:27 +0800</lastBuildDate><atom:link href="https://cjhung.tw/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>初探 Linux 的大括號擴展(Brace expansion)</title>
       <link>https://cjhung.tw/post/2019/190824-brace-expansion/</link>
@@ -20,10 +16,10 @@
       <description>大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
 而且產生的字串組合, 不一定要有實際檔案的存在,
 在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
-# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &#39;foo1.txt&#39; -&amp;gt; &#39;foo2.txt&#39;  大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
+# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &amp;#39;foo1.txt&amp;#39; -&amp;gt; &amp;#39;foo2.txt&amp;#39; 大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
 逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
 逗號 使用範例
-# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &#39;file&#39; mkdir: created directory &#39;file1&#39; mkdir: created directory &#39;file2&#39;  句號 使用範例
+# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &amp;#39;file&amp;#39; mkdir: created directory &amp;#39;file1&amp;#39; mkdir: created directory &amp;#39;file2&amp;#39; 句號 使用範例
 # echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1.</description>
     </item>
     

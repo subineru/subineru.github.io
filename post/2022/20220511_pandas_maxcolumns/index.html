@@ -7,22 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>shell | CJ Hung Blog</title>
-    <meta property="og:title" content="shell - CJ Hung Blog">
+    <title>[Python] Pandas DataFrame 如何顯示所有欄位 | CJ Hung Blog</title>
+    <meta property="og:title" content="[Python] Pandas DataFrame 如何顯示所有欄位 - CJ Hung Blog">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content="2022-05-10T21:00:00&#43;08:00">
+        
+        
+    <meta property="article:modified_time" content="2022-05-10T21:00:00&#43;08:00">
         
     <meta name="Keywords" content="">
-    <meta name="description" content="shell">
+    <meta name="description" content="[Python] Pandas DataFrame 如何顯示所有欄位">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://cjhung.tw/tags/shell/">
+    <meta property="og:url" content="https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
+        <link rel="stylesheet" href="/css/prism.css">
+    
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/tags/shell/index.xml" title="CJ Hung Blog" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -31,7 +36,6 @@
     
     
 </head>
-
 
 <body>
 <header id="header" class="clearfix">
@@ -47,7 +51,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://cjhung.tw/">首頁</a>
+                    <a class="current" href="https://cjhung.tw/">首頁</a>
                     
                     <a  href="https://cjhung.tw/archives/" title="歸檔">歸檔</a>
                     
@@ -59,61 +63,103 @@
 
 
 <div id="body">
+        
+        
     <div class="container">
         <div class="col-group">
 
             <div class="col-8" id="main">
                 <div class="res-cons">
-                    
-                    <h3 class="archive-title">
-                        包含标签
-                        <span class="keyword">shell</span>
-                        的文章
-                    </h3>
-                    
-
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://cjhung.tw/post/2019/190824-brace-expansion/">初探 Linux 的大括號擴展(Brace expansion)</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年8月24日
-                            </date>
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">[Python] Pandas DataFrame 如何顯示所有欄位</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2022年5月10日
+                        </date>
+                        
+                        <div class="post-meta">
+                            <span>|</span>
                             
-                            <div class="post-meta meta-category">
-                                |
-                                
-                                    <a href="https://cjhung.tw/categories/2019">2019</a>
-                                
-                            </div>
+                                <span class="meta-category"><a href="https://cjhung.tw/categories/2022">2022</a></span>
                             
-                            <div class="post-content">
-                                大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
-而且產生的字串組合, 不一定要有實際檔案的存在,
-在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
-# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &#39;foo1.txt&#39; -&gt; &#39;foo2.txt&#39; 大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
-逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
-逗號 使用範例
-# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &#39;file&#39; mkdir: created directory &#39;file1&#39; mkdir: created directory &#39;file2&#39; 句號 使用範例
-# echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1.……
-                                <p class="readmore"><a href="https://cjhung.tw/post/2019/190824-brace-expansion/">阅读全文</a></p>
-                            </div>
-                        </article>
+                        </div>
+                        
+                        
+                        
+                        <div class="post-content">
+                            <p>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">26</span>,size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">26</span>)), columns<span style="color:#f92672">=</span>list(<span style="color:#e6db74">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>))
+df
+</code></pre></div><p><img src="../2022/%5BPandas%5D%20DataFrame%20%E5%A6%82%E4%BD%95%E9%A1%AF%E7%A4%BA%E6%89%80%E6%9C%89%E6%AC%84%E4%BD%8D/Snipaste_2022-05-11_00-10-53.jpg" alt=""></p>
+<p>如下圖我們可以修改參數為 None，就會顯示所有的行數，不再限制。</p>
+<pre><code>pd.set_option(&quot;display.max.columns&quot;, None)
+df
+</code></pre><p><img src="../2022/%5BPandas%5D%20DataFrame%20%E5%A6%82%E4%BD%95%E9%A1%AF%E7%A4%BA%E6%89%80%E6%9C%89%E6%AC%84%E4%BD%8D/Snipaste_2022-05-11_00-11-57.jpg" alt=""></p>
+
+                        </div>
+
+                        
+
+
+                        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">使用 Pandas groupby 和 agg 合併資料</a></li>
+        
+        <li><a href="/post/2019/python-100days5/">練習 Python 100 Days(5)</a></li>
+        
+        <li><a href="/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/">實數轉換成整數</a></li>
+        
+    </ul>
+</div>
+
+
+                        <div class="post-meta meta-tags">
+                            
+                            <ul class="clearfix">
+                                
+                                <li><a href="https://cjhung.tw/tags/python">python</a></li>
+                                
+                                <li><a href="https://cjhung.tw/tags/pandas">pandas</a></li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </article>
                     
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "subineru-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-                    
-
-
-
-
-
+    
+    
 
                 </div>
             </div>
-
             <div id="secondary">
     <section class="widget">
         <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -246,6 +292,23 @@
 </footer>
 
 
+    
+    <script type="text/javascript">
+        
+        (function () {
+            $("pre code").parent().addClass("line-numbers")
+        }());
+
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script type="text/javascript" src="/js/prism.js" async="true"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
@@ -260,7 +323,6 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
 
 
 

@@ -7,22 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>shell | CJ Hung Blog</title>
-    <meta property="og:title" content="shell - CJ Hung Blog">
+    <title>2022 | CJ Hung Blog</title>
+    <meta property="og:title" content="2022 - CJ Hung Blog">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="">
-    <meta name="description" content="shell">
+    <meta name="description" content="2022">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://cjhung.tw/tags/shell/">
+    <meta property="og:url" content="https://cjhung.tw/archives/2022/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/tags/shell/index.xml" title="CJ Hung Blog" />
+    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/archives/2022/index.xml" title="CJ Hung Blog" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -65,41 +65,30 @@
             <div class="col-8" id="main">
                 <div class="res-cons">
                     
-                    <h3 class="archive-title">
-                        包含标签
-                        <span class="keyword">shell</span>
-                        的文章
-                    </h3>
-                    
 
                     
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://cjhung.tw/post/2019/190824-brace-expansion/">初探 Linux 的大括號擴展(Brace expansion)</a>
+                                    <a href="https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/">[Python] Pandas DataFrame 如何顯示所有欄位</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
-                                2019年8月24日
+                                2022年5月10日
                             </date>
                             
                             <div class="post-meta meta-category">
                                 |
                                 
-                                    <a href="https://cjhung.tw/categories/2019">2019</a>
+                                    <a href="https://cjhung.tw/categories/2022">2022</a>
                                 
                             </div>
                             
                             <div class="post-content">
-                                大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
-而且產生的字串組合, 不一定要有實際檔案的存在,
-在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
-# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &#39;foo1.txt&#39; -&gt; &#39;foo2.txt&#39; 大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
-逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
-逗號 使用範例
-# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &#39;file&#39; mkdir: created directory &#39;file1&#39; mkdir: created directory &#39;file2&#39; 句號 使用範例
-# echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1.……
-                                <p class="readmore"><a href="https://cjhung.tw/post/2019/190824-brace-expansion/">阅读全文</a></p>
+                                在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行
+import pandas as pd import numpy as np df = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;)) df 如下圖我們可以修改參數為 None，就會顯示所有的行數，不再限制。
+pd.set_option(&quot;display.max.columns&quot;, None)df……
+                                <p class="readmore"><a href="https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/">阅读全文</a></p>
                             </div>
                         </article>
                     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CJ Hung Blog</title>
@@ -6,17 +6,13 @@
     <description>Recent content in Categories on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 09 Nov 2019 20:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://cjhung.tw/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 10 May 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2019</title>
-      <link>https://cjhung.tw/categories/2019/</link>
-      <pubDate>Sat, 09 Nov 2019 20:00:00 +0800</pubDate>
+      <title>2022</title>
+      <link>https://cjhung.tw/categories/2022/</link>
+      <pubDate>Tue, 10 May 2022 21:00:00 +0800</pubDate>
       
-      <guid>https://cjhung.tw/categories/2019/</guid>
+      <guid>https://cjhung.tw/categories/2022/</guid>
       <description></description>
     </item>
     
@@ -26,6 +22,15 @@
       <pubDate>Sun, 09 Feb 2020 19:00:27 +0800</pubDate>
       
       <guid>https://cjhung.tw/categories/2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2019</title>
+      <link>https://cjhung.tw/categories/2019/</link>
+      <pubDate>Sat, 09 Nov 2019 20:00:00 +0800</pubDate>
+      
+      <guid>https://cjhung.tw/categories/2019/</guid>
       <description></description>
     </item>
     

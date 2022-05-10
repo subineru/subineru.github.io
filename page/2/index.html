@@ -7,22 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>shell | CJ Hung Blog</title>
-    <meta property="og:title" content="shell - CJ Hung Blog">
-    <meta property="og:type" content="article">
-        
-        
+    <title>CJ Hung Blog | </title>
+    <meta property="og:title" content="CJ Hung Blog | ">
+    <meta property="og:type" content="website">
     <meta name="Keywords" content="">
-    <meta name="description" content="shell">
-        
-    <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://cjhung.tw/tags/shell/">
+    <meta name="description" content="">
+    <meta property="og:url" content="https://cjhung.tw/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/tags/shell/index.xml" title="CJ Hung Blog" />
+    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/index.xml" title="CJ Hung Blog" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -39,15 +35,17 @@
         <div class="col-group">
             <div class="site-name ">
                 
-                    <a id="logo" href="https://cjhung.tw/">
-                        CJ Hung Blog
-                    </a>
+                    <h1>
+                        <a id="logo" href="https://cjhung.tw/">
+                            CJ Hung Blog
+                        </a>
+                    </h1>
                 
                 
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://cjhung.tw/">首頁</a>
+                    <a class="current" href="https://cjhung.tw/">首頁</a>
                     
                     <a  href="https://cjhung.tw/archives/" title="歸檔">歸檔</a>
                     
@@ -65,48 +63,55 @@
             <div class="col-8" id="main">
                 <div class="res-cons">
                     
-                    <h3 class="archive-title">
-                        包含标签
-                        <span class="keyword">shell</span>
-                        的文章
-                    </h3>
-                    
-
-                    
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="https://cjhung.tw/post/2019/190824-brace-expansion/">初探 Linux 的大括號擴展(Brace expansion)</a>
+                                    <a href="https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/" title="使用 Pandas groupby 和 agg 合併資料" >使用 Pandas groupby 和 agg 合併資料</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
-                                2019年8月24日
+                                2019年3月3日
                             </date>
                             
-                            <div class="post-meta meta-category">
-                                |
+                            <div class="post-meta">
+                                <span>|</span>
                                 
-                                    <a href="https://cjhung.tw/categories/2019">2019</a>
+                                <span class="meta-category"><a href="https://cjhung.tw/categories/2019">2019</a></span>
                                 
                             </div>
                             
                             <div class="post-content">
-                                大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
-而且產生的字串組合, 不一定要有實際檔案的存在,
-在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
-# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &#39;foo1.txt&#39; -&gt; &#39;foo2.txt&#39; 大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
-逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
-逗號 使用範例
-# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &#39;file&#39; mkdir: created directory &#39;file1&#39; mkdir: created directory &#39;file2&#39; 句號 使用範例
-# echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1.……
-                                <p class="readmore"><a href="https://cjhung.tw/post/2019/190824-brace-expansion/">阅读全文</a></p>
+                                前因 想要把下面 dataframe , 分類後合併在一起
+order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c 成為下面的 data format
+order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d] 先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
+&gt;&gt;&gt;f1 = lambda x: &#34;, &#34;.join(x.dropna()) &gt;&gt;&gt;f1(data.abbr) &#39;m, c, d, c&#39; &gt;&gt;&gt;f2 = lambda x: [z for y in x for z in y] &gt;&gt;&gt;f2(data.……
                             </div>
+                            <p class="readmore"><a href="https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/">閱讀全文</a></p>
                         </article>
                     
-
                     
 
 
+
+<ol class="page-navigator">
+    
+    <li class="prev">
+        <a href="https://cjhung.tw/">上一頁</a>
+    </li>
+    
+
+    
+    <li >
+        <a href="https://cjhung.tw/">1</a>
+    </li>
+    
+    <li  class="current">
+        <a href="https://cjhung.tw/page/2/">2</a>
+    </li>
+    
+
+    
+</ol>
 
 
 
