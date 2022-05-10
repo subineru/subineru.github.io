@@ -89,16 +89,16 @@
                         
                         <div class="post-content">
                             <p>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<pre><code class="language-code" data-lang="code">import pandas as pd
+import numpy as np
 
-df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">26</span>,size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">26</span>)), columns<span style="color:#f92672">=</span>list(<span style="color:#e6db74">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>))
+df = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
 df
-</code></pre></div><p><img src="../2022/%5BPandas%5D%20DataFrame%20%E5%A6%82%E4%BD%95%E9%A1%AF%E7%A4%BA%E6%89%80%E6%9C%89%E6%AC%84%E4%BD%8D/Snipaste_2022-05-11_00-10-53.jpg" alt=""></p>
+</code></pre><p><img src="../2022/20220511_pandas_maxcolumns/Snipaste_2022-05-11_00-10-53.jpg" alt=""></p>
 <p>如下圖我們可以修改參數為 None，就會顯示所有的行數，不再限制。</p>
-<pre><code>pd.set_option(&quot;display.max.columns&quot;, None)
+<pre><code class="language-code" data-lang="code">pd.set_option(&quot;display.max.columns&quot;, None)
 df
-</code></pre><p><img src="../2022/%5BPandas%5D%20DataFrame%20%E5%A6%82%E4%BD%95%E9%A1%AF%E7%A4%BA%E6%89%80%E6%9C%89%E6%AC%84%E4%BD%8D/Snipaste_2022-05-11_00-11-57.jpg" alt=""></p>
+</code></pre><p><img src="../2022/20220511_pandas_maxcolumns/Snipaste_2022-05-11_00-11-57.jpg" alt=""></p>
 
                         </div>
 
