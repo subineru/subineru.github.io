@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 24 Oct 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/tags/firewall/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Paloalto] 非對稱路由(asymmetric routing) 解決方法</title>
-      <link>https://cjhung.tw/post/2022/paloalto_asymmetric_routing/</link>
+      <link>https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</link>
       <pubDate>Mon, 24 Oct 2022 21:00:00 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2022/paloalto_asymmetric_routing/</guid>
+      <guid>https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</guid>
       <description>最近幫分公司更換防火牆，從 FortiGate 更換成 PaloAlto PA-220。
 前人設計網路時採用雙網關架構。其中一個網關連回總部，
 另一個連外網(預設的 Gateway)，使得連回總部的流量會發生去回不同路，
