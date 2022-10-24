@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on CJ Hung Blog</title>
-    <link>https://cjhung.tw/post/</link>
-    <description>Recent content in Posts on CJ Hung Blog</description>
+    <title>paloalto on CJ Hung Blog</title>
+    <link>https://cjhung.tw/tags/paloalto/</link>
+    <description>Recent content in paloalto on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 24 Oct 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Oct 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/tags/paloalto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Paloalto] 非對稱路由(asymmetric routing) 解決方法</title>
       <link>https://cjhung.tw/post/2022/paloalto_asymmetric_routing/</link>
@@ -27,26 +27,6 @@ Paloalto 擔心有 evasion attack就進行阻擋。於是，我想到兩種方�
 Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
 有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。
 &amp;gt; configure Entering configuration mode [edit] # set deviceconfig setting tcp asymmetric-path bypass # set deviceconfig setting session tcp-reject-non-syn no # commit 參考文件 1.</description>
-    </item>
-    
-    <item>
-      <title>[Python] Pandas DataFrame 如何顯示所有欄位</title>
-      <link>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</link>
-      <pubDate>Tue, 10 May 2022 21:00:00 +0800</pubDate>
-      
-      <guid>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</guid>
-      <description>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行。
-import pandas as pdimport numpy as npdf = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;))df修改參數為 None 之後，就會顯示所有的行數，不再只顯示 20 行。
-pd.set_option(&amp;quot;display.max.columns&amp;quot;, None)df</description>
-    </item>
-    
-    <item>
-      <title>網路練習 routing decision</title>
-      <link>https://cjhung.tw/post/2020/200209_routing_decision/</link>
-      <pubDate>Sun, 09 Feb 2020 19:00:27 +0800</pubDate>
-      
-      <guid>https://cjhung.tw/post/2020/200209_routing_decision/</guid>
-      <description></description>
     </item>
     
   </channel>

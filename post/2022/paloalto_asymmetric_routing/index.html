@@ -7,22 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>2022 | CJ Hung Blog</title>
-    <meta property="og:title" content="2022 - CJ Hung Blog">
+    <title>[Paloalto] 非對稱路由(asymmetric routing) 解決方法 | CJ Hung Blog</title>
+    <meta property="og:title" content="[Paloalto] 非對稱路由(asymmetric routing) 解決方法 - CJ Hung Blog">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content="2022-10-24T21:00:00&#43;08:00">
+        
+        
+    <meta property="article:modified_time" content="2022-10-24T21:00:00&#43;08:00">
         
     <meta name="Keywords" content="">
-    <meta name="description" content="2022">
+    <meta name="description" content="[Paloalto] 非對稱路由(asymmetric routing) 解決方法">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://cjhung.tw/archives/2022/">
+    <meta property="og:url" content="https://cjhung.tw/post/2022/paloalto_asymmetric_routing/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
+        <link rel="stylesheet" href="/css/prism.css">
+    
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/archives/2022/index.xml" title="CJ Hung Blog" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -31,7 +36,6 @@
     
     
 </head>
-
 
 <body>
 <header id="header" class="clearfix">
@@ -47,7 +51,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://cjhung.tw/">首頁</a>
+                    <a class="current" href="https://cjhung.tw/">首頁</a>
                     
                     <a  href="https://cjhung.tw/archives/" title="歸檔">歸檔</a>
                     
@@ -59,86 +63,105 @@
 
 
 <div id="body">
+        
+        
     <div class="container">
         <div class="col-group">
 
             <div class="col-8" id="main">
                 <div class="res-cons">
-                    
-
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://cjhung.tw/post/2022/paloalto_asymmetric_routing/">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2022年10月24日
-                            </date>
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2022年10月24日
+                        </date>
+                        
+                        <div class="post-meta">
+                            <span>|</span>
                             
-                            <div class="post-meta meta-category">
-                                |
-                                
-                                    <a href="https://cjhung.tw/categories/2022">2022</a>
-                                
-                            </div>
+                                <span class="meta-category"><a href="https://cjhung.tw/categories/2022">2022</a></span>
                             
-                            <div class="post-content">
-                                最近幫分公司更換防火牆，從 FortiGate 更換成 PaloAlto PA-220。
-前人設計網路時採用雙網關架構。其中一個網關連回總部，
-另一個連外網(預設的 Gateway)，使得連回總部的流量會發生去回不同路，
-在英文叫做 Asymmetric routing。 FortiGate 防火牆上可以通過，但是 PaloAlto 就擋了。
-想到了什麼 在網路架構，這種做法還滿常發生。然而，因為現今的次世代防火牆為了資安，
-往往會進一步檢查 OSI 的 session layer，在看不到完整封包下，
-Paloalto 擔心有 evasion attack就進行阻擋。於是，我想到兩種方式可以解決。
-一種是透過 DHCP 來配發靜態路由，讓內外網的流量走到各自該走的網關(參考文件1)，
-可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許。
-如果只要開放部分端口允許非對稱路由， 首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上。
-具體操作如下:
-Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
-有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。
-&gt; configure Entering configuration mode [edit] # set deviceconfig setting tcp asymmetric-path bypass # set deviceconfig setting session tcp-reject-non-syn no # commit 參考文件 1.……
-                                <p class="readmore"><a href="https://cjhung.tw/post/2022/paloalto_asymmetric_routing/">阅读全文</a></p>
-                            </div>
-                        </article>
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/">[Python] Pandas DataFrame 如何顯示所有欄位</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2022年5月10日
-                            </date>
+                        </div>
+                        
+                        
+                        
+                        <div class="post-content">
+                            <p>最近幫分公司更換防火牆，從 FortiGate 更換成 PaloAlto PA-220。</p>
+<p>前人設計網路時採用雙網關架構。其中一個網關連回總部，</p>
+<p>另一個連外網(預設的 Gateway)，使得連回總部的流量會發生去回不同路，</p>
+<p>在英文叫做 Asymmetric routing。 FortiGate 防火牆上可以通過，但是 PaloAlto 就擋了。</p>
+<p><img src="./asymmetric_routing.jpg" alt=""></p>
+<h3 id="想到了什麼">想到了什麼</h3>
+<p>在網路架構，這種做法還滿常發生。然而，因為現今的次世代防火牆為了資安，</p>
+<p>往往會進一步檢查 OSI 的 session layer，在看不到完整封包下，</p>
+<p>Paloalto 擔心有 evasion attack就進行阻擋。於是，我想到兩種方式可以解決。</p>
+<p>一種是透過 DHCP 來配發靜態路由，讓內外網的流量走到各自該走的網關(參考文件1)，</p>
+<p>可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許。</p>
+<p>如果只要開放部分端口允許非對稱路由， 首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上。</p>
+<p>具體操作如下:</p>
+<p><img src="20221024_225610_image.png" alt=""></p>
+<p><img src="20221024_225932_image.png" alt=""></p>
+<p>Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，</p>
+<p>有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; configure 
+Entering configuration mode
+<span style="color:#f92672">[</span>edit<span style="color:#f92672">]</span>       
+<span style="color:#75715e"># set deviceconfig setting tcp asymmetric-path bypass</span>
+<span style="color:#75715e"># set deviceconfig setting session tcp-reject-non-syn no</span>
+<span style="color:#75715e"># commit</span>
+</code></pre></div><h3 id="參考文件">參考文件</h3>
+<p><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClEICA0">1. How to push static routes from the Palo Alto Networks DHCP Server</a></p>
+<p><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClSHCA0">2. DotW: Issues with Asymmetric Routing</a></p>
+
+                        </div>
+
+                        
+
+
+                        
+
+
+                        <div class="post-meta meta-tags">
                             
-                            <div class="post-meta meta-category">
-                                |
+                            <ul class="clearfix">
                                 
-                                    <a href="https://cjhung.tw/categories/2022">2022</a>
+                                <li><a href="https://cjhung.tw/tags/firewall">firewall</a></li>
                                 
-                            </div>
+                                <li><a href="https://cjhung.tw/tags/paloalto">paloalto</a></li>
+                                
+                            </ul>
                             
-                            <div class="post-content">
-                                在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行。
-import pandas as pdimport numpy as npdf = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))df修改參數為 None 之後，就會顯示所有的行數，不再只顯示 20 行。
-pd.set_option(&quot;display.max.columns&quot;, None)df……
-                                <p class="readmore"><a href="https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/">阅读全文</a></p>
-                            </div>
-                        </article>
+                        </div>
+                    </article>
                     
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "subineru-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-                    
-
-
-
-
-
+    
+    
 
                 </div>
             </div>
-
             <div id="secondary">
     <section class="widget">
         <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -275,6 +298,23 @@ pd.set_option(&quot;display.max.columns&quot;, None)df……
 </footer>
 
 
+    
+    <script type="text/javascript">
+        
+        (function () {
+            $("pre code").parent().addClass("line-numbers")
+        }());
+
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script type="text/javascript" src="/js/prism.js" async="true"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
@@ -289,7 +329,6 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
 
 
 

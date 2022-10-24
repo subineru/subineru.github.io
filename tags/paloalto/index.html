@@ -7,22 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>2022 | CJ Hung Blog</title>
-    <meta property="og:title" content="2022 - CJ Hung Blog">
+    <title>paloalto | CJ Hung Blog</title>
+    <meta property="og:title" content="paloalto - CJ Hung Blog">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="">
-    <meta name="description" content="2022">
+    <meta name="description" content="paloalto">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://cjhung.tw/archives/2022/">
+    <meta property="og:url" content="https://cjhung.tw/tags/paloalto/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/archives/2022/index.xml" title="CJ Hung Blog" />
+    <link rel="alternate" type="application/rss+xml+xml" href="https://cjhung.tw/tags/paloalto/index.xml" title="CJ Hung Blog" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -65,6 +65,12 @@
             <div class="col-8" id="main">
                 <div class="res-cons">
                     
+                    <h3 class="archive-title">
+                        包含标签
+                        <span class="keyword">paloalto</span>
+                        的文章
+                    </h3>
+                    
 
                     
                         <article class="post">
@@ -100,31 +106,6 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
 有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。
 &gt; configure Entering configuration mode [edit] # set deviceconfig setting tcp asymmetric-path bypass # set deviceconfig setting session tcp-reject-non-syn no # commit 參考文件 1.……
                                 <p class="readmore"><a href="https://cjhung.tw/post/2022/paloalto_asymmetric_routing/">阅读全文</a></p>
-                            </div>
-                        </article>
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/">[Python] Pandas DataFrame 如何顯示所有欄位</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2022年5月10日
-                            </date>
-                            
-                            <div class="post-meta meta-category">
-                                |
-                                
-                                    <a href="https://cjhung.tw/categories/2022">2022</a>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行。
-import pandas as pdimport numpy as npdf = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))df修改參數為 None 之後，就會顯示所有的行數，不再只顯示 20 行。
-pd.set_option(&quot;display.max.columns&quot;, None)df……
-                                <p class="readmore"><a href="https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/">阅读全文</a></p>
                             </div>
                         </article>
                     

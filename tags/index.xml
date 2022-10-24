@@ -6,7 +6,25 @@
     <description>Recent content in Tags on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 10 May 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Oct 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>firewall</title>
+      <link>https://cjhung.tw/tags/firewall/</link>
+      <pubDate>Mon, 24 Oct 2022 21:00:00 +0800</pubDate>
+      
+      <guid>https://cjhung.tw/tags/firewall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paloalto</title>
+      <link>https://cjhung.tw/tags/paloalto/</link>
+      <pubDate>Mon, 24 Oct 2022 21:00:00 +0800</pubDate>
+      
+      <guid>https://cjhung.tw/tags/paloalto/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>pandas</title>
       <link>https://cjhung.tw/tags/pandas/</link>

@@ -4,31 +4,56 @@
   
   <url>
     <loc>https://cjhung.tw/categories/2022/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/archives/2022/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
+    <loc>https://cjhung.tw/post/2022/paloalto_asymmetric_routing/</loc>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/archives/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/categories/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://cjhung.tw/</loc>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cjhung.tw/tags/firewall/</loc>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cjhung.tw/tags/paloalto/</loc>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cjhung.tw/post/</loc>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cjhung.tw/tags/</loc>
+    <lastmod>2022-10-24T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</loc>
     <lastmod>2022-05-10T21:00:00+08:00</lastmod>
   </url>
   
@@ -38,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cjhung.tw/tags/python/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/tags/</loc>
     <lastmod>2022-05-10T21:00:00+08:00</lastmod>
   </url>
   
