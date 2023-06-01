@@ -19,11 +19,11 @@
 在英文叫做 Asymmetric routing。 FortiGate 防火牆上可以通過，但是 PaloAlto 就擋了。
 想到了什麼 在網路架構，這種做法還滿常發生。然而，因為現今的次世代防火牆為了資安，
 往往會進一步檢查 OSI 的 session layer，在看不到完整封包下，
-Paloalto 擔心有 evasion attack就進行阻擋。於是，我想到兩種方式可以解決。
+Paloalto 認為有 evasion attack 問題故進行阻擋。於是，我想到兩種方式處理。
 一種是透過 DHCP 來配發靜態路由，讓內外網的流量走到各自該走的網關(參考文件1)，
-可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許。
-如果只要開放部分端口允許非對稱路由， 首先在 NETWORK -&amp;gt; Zone Protection 建立 Profile，之後套用到 Zones 上。
-具體操作如下:
+可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許(參考文件2)。
+如果只要開放部分端口允許非對稱路由，首先在 NETWORK -&amp;gt; Zone Protection 建立 Profile，之後套用到 Zones 上即可。
+具體設定如下:
 Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
 有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。
 &amp;gt; configure Entering configuration mode [edit] # set deviceconfig setting tcp asymmetric-path bypass # set deviceconfig setting session tcp-reject-non-syn no # commit 參考文件 1.</description>

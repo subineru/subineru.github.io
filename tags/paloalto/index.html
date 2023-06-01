@@ -97,11 +97,11 @@
 在英文叫做 Asymmetric routing。 FortiGate 防火牆上可以通過，但是 PaloAlto 就擋了。
 想到了什麼 在網路架構，這種做法還滿常發生。然而，因為現今的次世代防火牆為了資安，
 往往會進一步檢查 OSI 的 session layer，在看不到完整封包下，
-Paloalto 擔心有 evasion attack就進行阻擋。於是，我想到兩種方式可以解決。
+Paloalto 認為有 evasion attack 問題故進行阻擋。於是，我想到兩種方式處理。
 一種是透過 DHCP 來配發靜態路由，讓內外網的流量走到各自該走的網關(參考文件1)，
-可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許。
-如果只要開放部分端口允許非對稱路由， 首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上。
-具體操作如下:
+可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許(參考文件2)。
+如果只要開放部分端口允許非對稱路由，首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上即可。
+具體設定如下:
 Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
 有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。
 &gt; configure Entering configuration mode [edit] # set deviceconfig setting tcp asymmetric-path bypass # set deviceconfig setting session tcp-reject-non-syn no # commit 參考文件 1.……
@@ -133,6 +133,10 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="https://cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/" title="[Brave] Brave 開放垂直標籤">[Brave] Brave 開放垂直標籤</a>
+    </li>
     
     <li>
         <a href="https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" title="[Paloalto] 非對稱路由(asymmetric routing) 解決方法">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
@@ -170,10 +174,6 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
         <a href="https://cjhung.tw/post/2019/190511-timberman/" title="Timberman 砍了767個木頭">Timberman 砍了767個木頭</a>
     </li>
     
-    <li>
-        <a href="https://cjhung.tw/post/2019/python-100days5/" title="練習 Python 100 Days(5)">練習 Python 100 Days(5)</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -196,6 +196,10 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
         <a href="https://cjhung.tw/categories/2022/">2022(2)</a>
     </li>
     
+    <li>
+        <a href="https://cjhung.tw/categories/2023/">2023(1)</a>
+    </li>
+    
 </ul>
 
     </section>
@@ -203,6 +207,10 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
     <section class="widget">
         <h3 class="widget-title">標籤</h3>
 <div class="tagcloud">
+    
+    <a href="https://cjhung.tw/tags/brave/">brave</a>
+    
+    <a href="https://cjhung.tw/tags/browser/">browser</a>
     
     <a href="https://cjhung.tw/tags/firewall/">firewall</a>
     
@@ -221,6 +229,8 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
     <a href="https://cjhung.tw/tags/shell/">shell</a>
     
     <a href="https://cjhung.tw/tags/timberman/">timberman</a>
+    
+    <a href="https://cjhung.tw/tags/vertical-tabs/">vertical-tabs</a>
     
     <a href="https://cjhung.tw/tags/%E5%8F%B0%E5%8C%97/">台北</a>
     
@@ -248,7 +258,7 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
 </div>
 <footer id="footer">
     <div class="container">
-        &copy; 2022 <a href="https://cjhung.tw/">CJ Hung Blog By CJ Hung</a>.
+        &copy; 2023 <a href="https://cjhung.tw/">CJ Hung Blog By CJ Hung</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
         

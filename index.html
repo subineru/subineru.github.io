@@ -66,6 +66,36 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
+                                    <a href="https://cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/" title="[Brave] Brave 開放垂直標籤" >[Brave] Brave 開放垂直標籤</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2023年6月1日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="https://cjhung.tw/categories/2023">2023</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                新版的 Brave 提供垂直標籤的功能，除了可以改善瀏覽器的畫面，看起來壅擠的感受。又能夠讓分頁的名字顯示得更長。
+是個不錯的功能。至於要怎麼開啟呢？
+請參考下面的步驟
+Brave 版本 首先，請確認 Brave 的版本是 1.52 以上。
+開啟垂直標籤 在網址列輸入 brave://settings/appearance，選擇設定的外觀，啟用 &ldquo;使用垂直分頁&rdquo;。
+垂直分頁 隨意開啟幾個書籤，就會發現分頁顯示在左邊，而不是在上方。
+調整垂直分頁大小 Brave 還提供一個小功能，點選紅框的按鈕之後，分頁就會只剩下圖示。
+對於喜歡更美觀的人，是個不錯的功能。……
+                            </div>
+                            <p class="readmore"><a href="https://cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/">閱讀全文</a></p>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
                                     <a href="https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" title="[Paloalto] 非對稱路由(asymmetric routing) 解決方法" >[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
                                 </h1>
                             </header>
@@ -87,11 +117,11 @@
 在英文叫做 Asymmetric routing。 FortiGate 防火牆上可以通過，但是 PaloAlto 就擋了。
 想到了什麼 在網路架構，這種做法還滿常發生。然而，因為現今的次世代防火牆為了資安，
 往往會進一步檢查 OSI 的 session layer，在看不到完整封包下，
-Paloalto 擔心有 evasion attack就進行阻擋。於是，我想到兩種方式可以解決。
+Paloalto 認為有 evasion attack 問題故進行阻擋。於是，我想到兩種方式處理。
 一種是透過 DHCP 來配發靜態路由，讓內外網的流量走到各自該走的網關(參考文件1)，
-可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許。
-如果只要開放部分端口允許非對稱路由， 首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上。
-具體操作如下:
+可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許(參考文件2)。
+如果只要開放部分端口允許非對稱路由，首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上即可。
+具體設定如下:
 Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
 有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。
 &gt; configure Entering configuration mode [edit] # set deviceconfig setting tcp asymmetric-path bypass # set deviceconfig setting session tcp-reject-non-syn no # commit 參考文件 1.……
@@ -314,32 +344,6 @@ pd.set_option(&quot;display.max.columns&quot;, None)df……
                             <p class="readmore"><a href="https://cjhung.tw/post/2019/190511-timberman/">閱讀全文</a></p>
                         </article>
                     
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="https://cjhung.tw/post/2019/python-100days5/" title="練習 Python 100 Days(5)" >練習 Python 100 Days(5)</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年5月11日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a href="https://cjhung.tw/categories/2019">2019</a></span>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                練習 Python 100 Days 前幾天的比較簡單, 就從第五天的練習題開始
-水仙花數(Narcissistic number) 用來描述一個 N 位非負數, 其中每個數字的 N 次方和等於該數字本身 代碼:
-for num in range(1000): squares = len(str(num)) count = 0 count = sum([int(x)**squares for x in str(num)]) if num == count: print(f&#34;The Narcissistic number is : {count}&#34; ) 完美數(Perfect number) 用來描述一個數字, 除了自己以外的所有真因子的總和, 等於它自己, 就是完美數 代碼:
-for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [] and sum(list) == num: print(num) 參考: Python-100-Days - Day5……
-                            </div>
-                            <p class="readmore"><a href="https://cjhung.tw/post/2019/python-100days5/">閱讀全文</a></p>
-                        </article>
-                    
                     
 
 
@@ -385,6 +389,10 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
 <ul class="widget-list">
     
     <li>
+        <a href="https://cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/" title="[Brave] Brave 開放垂直標籤">[Brave] Brave 開放垂直標籤</a>
+    </li>
+    
+    <li>
         <a href="https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" title="[Paloalto] 非對稱路由(asymmetric routing) 解決方法">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
     </li>
     
@@ -420,10 +428,6 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
         <a href="https://cjhung.tw/post/2019/190511-timberman/" title="Timberman 砍了767個木頭">Timberman 砍了767個木頭</a>
     </li>
     
-    <li>
-        <a href="https://cjhung.tw/post/2019/python-100days5/" title="練習 Python 100 Days(5)">練習 Python 100 Days(5)</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -446,6 +450,10 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
         <a href="https://cjhung.tw/categories/2022/">2022(2)</a>
     </li>
     
+    <li>
+        <a href="https://cjhung.tw/categories/2023/">2023(1)</a>
+    </li>
+    
 </ul>
 
     </section>
@@ -453,6 +461,10 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
     <section class="widget">
         <h3 class="widget-title">標籤</h3>
 <div class="tagcloud">
+    
+    <a href="https://cjhung.tw/tags/brave/">brave</a>
+    
+    <a href="https://cjhung.tw/tags/browser/">browser</a>
     
     <a href="https://cjhung.tw/tags/firewall/">firewall</a>
     
@@ -471,6 +483,8 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
     <a href="https://cjhung.tw/tags/shell/">shell</a>
     
     <a href="https://cjhung.tw/tags/timberman/">timberman</a>
+    
+    <a href="https://cjhung.tw/tags/vertical-tabs/">vertical-tabs</a>
     
     <a href="https://cjhung.tw/tags/%E5%8F%B0%E5%8C%97/">台北</a>
     
@@ -498,7 +512,7 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
 </div>
 <footer id="footer">
     <div class="container">
-        &copy; 2022 <a href="https://cjhung.tw/">CJ Hung Blog By CJ Hung</a>.
+        &copy; 2023 <a href="https://cjhung.tw/">CJ Hung Blog By CJ Hung</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
         
