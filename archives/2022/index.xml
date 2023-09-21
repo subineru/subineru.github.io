@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2022 on CJ Hung Blog</title>
-    <link>https://cjhung.tw/archives/2022/</link>
+    <link>https://www.cjhung.tw/archives/2022/</link>
     <description>Recent content in 2022 on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 24 Oct 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://cjhung.tw/archives/2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Oct 2022 21:00:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/archives/2022/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Paloalto] 非對稱路由(asymmetric routing) 解決方法</title>
-      <link>https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</link>
+      <link>https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</link>
       <pubDate>Mon, 24 Oct 2022 21:00:00 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</guid>
+      <guid>https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</guid>
       <description>最近幫分公司更換防火牆，從 FortiGate 更換成 PaloAlto PA-220。
 前人設計網路時採用雙網關架構。其中一個網關連回總部，
 另一個連外網(預設的 Gateway)，使得連回總部的流量會發生去回不同路，
@@ -31,10 +31,10 @@ Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
     
     <item>
       <title>[Python] Pandas DataFrame 如何顯示所有欄位</title>
-      <link>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</link>
+      <link>https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/</link>
       <pubDate>Tue, 10 May 2022 21:00:00 +0800</pubDate>
       
-      <guid>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</guid>
+      <guid>https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/</guid>
       <description>在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行。
 import pandas as pdimport numpy as npdf = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;))df修改參數為 None 之後，就會顯示所有的行數，不再只顯示 20 行。
 pd.set_option(&amp;quot;display.max.columns&amp;quot;, None)df</description>

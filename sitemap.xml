@@ -3,212 +3,222 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cjhung.tw/categories/2023/</loc>
+    <loc>https://www.cjhung.tw/categories/2023/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/archives/2023/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/post/2023/20230812_nuitka_introduce/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/archives/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/categories/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/tags/nuitka/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/post/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/tags/python/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/tags/</loc>
+    <lastmod>2023-08-12T02:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/</loc>
     <lastmod>2023-06-01T11:56:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/archives/2023/</loc>
+    <loc>https://www.cjhung.tw/tags/brave/</loc>
     <lastmod>2023-06-01T11:56:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/</loc>
+    <loc>https://www.cjhung.tw/tags/browser/</loc>
     <lastmod>2023-06-01T11:56:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/archives/</loc>
+    <loc>https://www.cjhung.tw/tags/vertical-tabs/</loc>
     <lastmod>2023-06-01T11:56:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/brave/</loc>
-    <lastmod>2023-06-01T11:56:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/tags/browser/</loc>
-    <lastmod>2023-06-01T11:56:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/categories/</loc>
-    <lastmod>2023-06-01T11:56:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/</loc>
-    <lastmod>2023-06-01T11:56:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/post/</loc>
-    <lastmod>2023-06-01T11:56:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/tags/</loc>
-    <lastmod>2023-06-01T11:56:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/tags/vertical-tabs/</loc>
-    <lastmod>2023-06-01T11:56:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/categories/2022/</loc>
+    <loc>https://www.cjhung.tw/categories/2022/</loc>
     <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/archives/2022/</loc>
+    <loc>https://www.cjhung.tw/archives/2022/</loc>
     <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</loc>
+    <loc>https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/</loc>
     <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/firewall/</loc>
+    <loc>https://www.cjhung.tw/tags/firewall/</loc>
     <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/paloalto/</loc>
+    <loc>https://www.cjhung.tw/tags/paloalto/</loc>
     <lastmod>2022-10-24T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2022/20220511_pandas_maxcolumns/</loc>
+    <loc>https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/</loc>
     <lastmod>2022-05-10T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/pandas/</loc>
+    <loc>https://www.cjhung.tw/tags/pandas/</loc>
     <lastmod>2022-05-10T21:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/python/</loc>
-    <lastmod>2022-05-10T21:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cjhung.tw/categories/2020/</loc>
+    <loc>https://www.cjhung.tw/categories/2020/</loc>
     <lastmod>2020-02-09T19:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/archives/2020/</loc>
+    <loc>https://www.cjhung.tw/archives/2020/</loc>
     <lastmod>2020-02-09T19:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/network/</loc>
+    <loc>https://www.cjhung.tw/tags/network/</loc>
     <lastmod>2020-02-09T19:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2020/200209_routing_decision/</loc>
+    <loc>https://www.cjhung.tw/post/2020/200209_routing_decision/</loc>
     <lastmod>2020-02-09T19:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/</loc>
+    <loc>https://www.cjhung.tw/post/2019/</loc>
     <lastmod>2019-11-09T20:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/categories/2019/</loc>
+    <loc>https://www.cjhung.tw/categories/2019/</loc>
     <lastmod>2019-11-09T20:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/archives/2019/</loc>
+    <loc>https://www.cjhung.tw/archives/2019/</loc>
     <lastmod>2019-11-09T20:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/191109-%E7%99%BE%E9%AD%9A%E9%AE%AE%E9%A3%9F%E5%B1%8B/</loc>
+    <loc>https://www.cjhung.tw/post/2019/191109-%E7%99%BE%E9%AD%9A%E9%AE%AE%E9%A3%9F%E5%B1%8B/</loc>
     <lastmod>2019-11-09T20:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/%E5%8F%B0%E5%8C%97/</loc>
+    <loc>https://www.cjhung.tw/tags/%E5%8F%B0%E5%8C%97/</loc>
     <lastmod>2019-11-09T20:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/%E9%A3%9F%E8%A8%98/</loc>
+    <loc>https://www.cjhung.tw/tags/%E9%A3%9F%E8%A8%98/</loc>
     <lastmod>2019-11-09T20:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/191101-%E4%B8%80%E6%97%A5%E5%8C%97%E9%AB%98/</loc>
+    <loc>https://www.cjhung.tw/post/2019/191101-%E4%B8%80%E6%97%A5%E5%8C%97%E9%AB%98/</loc>
     <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/%E5%96%AE%E8%BB%8A/</loc>
+    <loc>https://www.cjhung.tw/tags/%E5%96%AE%E8%BB%8A/</loc>
     <lastmod>2019-11-02T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/190831-%E5%A4%A7%E5%8F%A4%E5%B1%B1/</loc>
+    <loc>https://www.cjhung.tw/post/2019/190831-%E5%A4%A7%E5%8F%A4%E5%B1%B1/</loc>
     <lastmod>2019-08-31T21:00:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/linux/</loc>
+    <loc>https://www.cjhung.tw/tags/linux/</loc>
     <lastmod>2019-08-24T15:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/shell/</loc>
+    <loc>https://www.cjhung.tw/tags/shell/</loc>
     <lastmod>2019-08-24T15:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/190824-brace-expansion/</loc>
+    <loc>https://www.cjhung.tw/post/2019/190824-brace-expansion/</loc>
     <lastmod>2019-08-24T15:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/game/</loc>
+    <loc>https://www.cjhung.tw/tags/game/</loc>
     <lastmod>2019-05-12T13:55:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/tags/timberman/</loc>
+    <loc>https://www.cjhung.tw/tags/timberman/</loc>
     <lastmod>2019-05-12T13:55:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/190512-timberman/</loc>
+    <loc>https://www.cjhung.tw/post/2019/190512-timberman/</loc>
     <lastmod>2019-05-12T13:55:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/190511-timberman/</loc>
+    <loc>https://www.cjhung.tw/post/2019/190511-timberman/</loc>
     <lastmod>2019-05-11T17:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/python-100days5/</loc>
+    <loc>https://www.cjhung.tw/post/2019/python-100days5/</loc>
     <lastmod>2019-05-11T17:00:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</loc>
+    <loc>https://www.cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/</loc>
     <lastmod>2019-04-07T15:29:29+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</loc>
+    <loc>https://www.cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/</loc>
     <lastmod>2019-03-03T22:34:27+08:00</lastmod>
   </url>
   
