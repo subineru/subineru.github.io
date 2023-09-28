@@ -6,7 +6,21 @@
     <description>Recent content in 2023 on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 12 Aug 2023 02:27:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/categories/2023/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 10:27:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/categories/2023/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[DOTNET] dotnet 使用參數 self-contained 產生執行程式跳出無法解析</title>
+      <link>https://www.cjhung.tw/post/2023/20230928_fix_error_dotnet_publish/</link>
+      <pubDate>Thu, 28 Sep 2023 10:27:00 +0800</pubDate>
+      
+      <guid>https://www.cjhung.tw/post/2023/20230928_fix_error_dotnet_publish/</guid>
+      <description>最近在瞭解使用 .NET 6.0 如何寫桌面工具，執行 dotnet publish 來產生執行檔有幾種方法，
+其中一種是帶 Self-Contained，就不用在電腦安裝 .NET Runtime 執行開發的程式，
+也因為包了很多程式在執行檔內，執行程式會變很大。
+而我在編譯的過程中，卻跳出 error NU1100: 無法解析 &amp;rsquo;net6.0-windows 7.0&amp;rsquo; 的錯誤，
+單純執行 dotnet run 就不會有問題。 尋遍網路上的文章，看到有人問 dotnet nuget list source 未設定來源的問題，
+死馬當活馬醫的心態下，幫自己的 nuget 新增來源 最後再重新跑一次，就可以正常編譯了。 </description>
+    </item>
+    
     <item>
       <title>[Python] nuitka 使用介紹</title>
       <link>https://www.cjhung.tw/post/2023/20230812_nuitka_introduce/</link>
