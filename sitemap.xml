@@ -2,31 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.cjhung.tw/post/2023/20230812_nuitka_introduce/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/categories/2023/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/archives/2023/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/archives/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/categories/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/post/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/tags/revenue/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/tags/stock/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/tags/</loc>
+    <lastmod>2023-10-25T11:34:00+08:00</lastmod>
+  </url><url>
     <loc>https://www.cjhung.tw/post/2023/20230928_fix_error_dotnet_publish/</loc>
     <lastmod>2023-09-28T10:27:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.cjhung.tw/categories/2023/</loc>
-    <lastmod>2023-09-28T10:27:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/archives/2023/</loc>
-    <lastmod>2023-09-28T10:27:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/archives/</loc>
-    <lastmod>2023-09-28T10:27:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/categories/</loc>
-    <lastmod>2023-09-28T10:27:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/</loc>
-    <lastmod>2023-09-28T10:27:00+08:00</lastmod>
-  </url><url>
     <loc>https://www.cjhung.tw/tags/dotnet/</loc>
-    <lastmod>2023-09-28T10:27:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/post/</loc>
-    <lastmod>2023-09-28T10:27:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/tags/</loc>
     <lastmod>2023-09-28T10:27:00+08:00</lastmod>
   </url><url>
     <loc>https://www.cjhung.tw/post/2023/20230812_nuitka_introduce/</loc>

@@ -67,6 +67,41 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2019/190824-brace-expansion/" title="初探 Linux 的大括號擴展(Brace expansion)" target="_blank">初探 Linux 的大括號擴展(Brace expansion)</a>
+            </h1>
+        </header>
+        
+  <time datetime="2019-08-24T07:00:27Z" class="post-meta meta-date dt-published">
+    2019-08-24
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/2019' target="_blank">2019</a>
+  
+</div>
+
+
+        <div class="post-content">
+            大括號擴展(Brace expansion)是一種機制, 協助我們使用省略的字串產生相對應的字串組合,
+而且產生的字串組合, 不一定要有實際檔案的存在,
+在這裡下指令 echo 做示範, 套用到 cp 指令後, 檔案 foo1.txt 就會複製到 foo2.txt
+# echo foo{1,2}.txt foo1.txt foo2.txt # cp -v foo{1,2}.txt &#39;foo1.txt&#39; -&gt; &#39;foo2.txt&#39; 大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.) ,
+逗號是用來分開不同的字串, 而句號是用來產生有序列性的字串
+逗號 使用範例
+# echo file{,1,2} file file1 file2 # mkdir -v file{,1,2} mkdir: created directory &#39;file&#39; mkdir: created directory &#39;file1&#39; mkdir: created directory &#39;file2&#39; 句號 使用範例
+# echo file{1..5} file1 file2 file3 file4 file5 # mkdir -v file{1.……
+        </div>
+        <p class="readmore"><a href="https://www.cjhung.tw/post/2019/190824-brace-expansion/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.cjhung.tw/post/2019/190512-timberman/" title="Timberman 砍了1026個木頭" target="_blank">Timberman 砍了1026個木頭</a>
             </h1>
         </header>
@@ -296,6 +331,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.cjhung.tw/post/2023/20230812_nuitka_introduce/" title="[上市公司] 2023年9月份營收前十" target="_blank">[上市公司] 2023年9月份營收前十</a>
+    </li>
+    
+    <li>
         <a href="https://www.cjhung.tw/post/2023/20230928_fix_error_dotnet_publish/" title="[DOTNET] dotnet 使用參數 self-contained 產生執行程式跳出無法解析" target="_blank">[DOTNET] dotnet 使用參數 self-contained 產生執行程式跳出無法解析</a>
     </li>
     
@@ -331,10 +370,6 @@ if (!doNotTrack) {
         <a href="https://www.cjhung.tw/post/2019/190831-%E5%A4%A7%E5%8F%A4%E5%B1%B1/" title="蘆竹大古山  69 KM ; 爬升 590 M " target="_blank">蘆竹大古山  69 KM ; 爬升 590 M </a>
     </li>
     
-    <li>
-        <a href="https://www.cjhung.tw/post/2019/190824-brace-expansion/" title="初探 Linux 的大括號擴展(Brace expansion)" target="_blank">初探 Linux 的大括號擴展(Brace expansion)</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -350,7 +385,7 @@ if (!doNotTrack) {
     
     <li><a href="https://www.cjhung.tw/categories/2022/">2022 (2)</a></li>
     
-    <li><a href="https://www.cjhung.tw/categories/2023/">2023 (3)</a></li>
+    <li><a href="https://www.cjhung.tw/categories/2023/">2023 (4)</a></li>
     
 </ul>
     </section>
@@ -381,7 +416,11 @@ if (!doNotTrack) {
     
     <a href="https://www.cjhung.tw/tags/python/">python</a>
     
+    <a href="https://www.cjhung.tw/tags/revenue/">revenue</a>
+    
     <a href="https://www.cjhung.tw/tags/shell/">shell</a>
+    
+    <a href="https://www.cjhung.tw/tags/stock/">stock</a>
     
     <a href="https://www.cjhung.tw/tags/timberman/">timberman</a>
     
