@@ -6,22 +6,31 @@
     <description>Recent content in Tags on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 25 Oct 2023 11:34:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 11:34:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>revenue</title>
-      <link>https://www.cjhung.tw/tags/revenue/</link>
-      <pubDate>Wed, 25 Oct 2023 11:34:00 +0800</pubDate>
+      <title>EPS</title>
+      <link>https://www.cjhung.tw/tags/eps/</link>
+      <pubDate>Tue, 31 Oct 2023 11:34:00 +0800</pubDate>
       
-      <guid>https://www.cjhung.tw/tags/revenue/</guid>
+      <guid>https://www.cjhung.tw/tags/eps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>stock</title>
       <link>https://www.cjhung.tw/tags/stock/</link>
-      <pubDate>Wed, 25 Oct 2023 11:34:00 +0800</pubDate>
+      <pubDate>Tue, 31 Oct 2023 11:34:00 +0800</pubDate>
       
       <guid>https://www.cjhung.tw/tags/stock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>revenue</title>
+      <link>https://www.cjhung.tw/tags/revenue/</link>
+      <pubDate>Wed, 25 Oct 2023 11:34:00 +0800</pubDate>
+      
+      <guid>https://www.cjhung.tw/tags/revenue/</guid>
       <description></description>
     </item>
     
