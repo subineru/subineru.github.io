@@ -7,24 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>[Paloalto] 非對稱路由(asymmetric routing) 解決方法 | CJ Hung Blog</title>
-    <meta property="og:title" content="[Paloalto] 非對稱路由(asymmetric routing) 解決方法 - CJ Hung Blog">
+    <title>Posts | CJ Hung Blog</title>
+    <meta property="og:title" content="Posts - CJ Hung Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-10-24T21:00:00&#43;08:00'>
-        
-        
-    <meta property="article:modified_time" content='2022-10-24T21:00:00&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="[Paloalto] 非對稱路由(asymmetric routing) 解決方法">
+    <meta name="description" content="Posts">
         
     <meta name="author" content="CJ Hung">
-    <meta property="og:url" content="https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/">
+    <meta property="og:url" content="https://www.cjhung.tw/post/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml" href="https://www.cjhung.tw/post/index.xml" title="CJ Hung Blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -69,106 +66,49 @@
                     
 <div class="res-cons">
     
+    
     <article class="post">
         <header>
-            <h1 class="post-title">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</h1>
+            <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2019/" title="" target="_blank"></a>
+            </h1>
         </header>
         
-  <time datetime="2022-10-24T13:00:00Z" class="post-meta meta-date dt-published">
-    2022-10-24
-  </time>
 
 
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/2022' target="_blank">2022</a>
-  
-</div>
-
-
-        
-        
         <div class="post-content">
-            <p>最近幫分公司更換防火牆，從 FortiGate 更換成 PaloAlto PA-220。</p>
-<p>前人設計網路時採用雙網關架構。其中一個網關連回總部，</p>
-<p>另一個連外網(預設的 Gateway)，使得連回總部的流量會發生去回不同路，</p>
-<p>在英文叫做 Asymmetric routing。 FortiGate 防火牆上可以通過，但是 PaloAlto 就擋了。</p>
-<p>
-        <img class="mx-auto" alt="" src="./asymmetric_routing.jpg" />   
-    </p>
-<h2 id="想到了什麼">想到了什麼</h2>
-<p>在網路架構，這種做法還滿常發生。然而，因為現今的次世代防火牆為了資安，</p>
-<p>往往會進一步檢查 OSI 的 session layer，在看不到完整封包下，</p>
-<p>Paloalto 認為有 evasion attack 問題故進行阻擋。於是，我想到兩種方式處理。</p>
-<p>一種是透過 DHCP 來配發靜態路由，讓內外網的流量走到各自該走的網關(參考文件1)，</p>
-<p>可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許(參考文件2)。</p>
-<p>如果只要開放部分端口允許非對稱路由，首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上即可。</p>
-<p>具體設定如下:</p>
-<p>
-        <img class="mx-auto" alt="" src="20221024_225610_image.png" />   
-    </p>
-<p>
-        <img class="mx-auto" alt="" src="20221024_225932_image.png" />   
-    </p>
-<p>Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，</p>
-<p>有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; configure 
-</span></span><span style="display:flex;"><span>Entering configuration mode
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>edit<span style="color:#f92672">]</span>     
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># set deviceconfig setting tcp asymmetric-path bypass</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># set deviceconfig setting session tcp-reject-non-syn no</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># commit</span>
-</span></span></code></pre></div><h3 id="參考文件">參考文件</h3>
-<p><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClEICA0">1. How to push static routes from the Palo Alto Networks DHCP Server</a></p>
-<p><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClSHCA0">2. DotW: Issues with Asymmetric Routing</a></p>
-
+            TOML:
++++ title = &#34;Posts&#34; menu = &#34;main&#34; weight = &#34;10&#34; +++ ……
         </div>
-
-        
-
-
-        
-
-
-        <div class="post-meta meta-tags">
-            
-            <ul class="clearfix">
-                
-                <li><a href='/tags/firewall' target="_blank">firewall</a></li>
-                
-                <li><a href='/tags/paloalto' target="_blank">paloalto</a></li>
-                
-            </ul>
-            
-        </div>
+        <p class="readmore"><a href="https://www.cjhung.tw/post/2019/" target="_blank">Continue reading</a></p>
     </article>
     
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
     
     
+
+
+
+<ol class="page-navigator">
     
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "subineru-github-io" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <li class="prev">
+        <a href="https://www.cjhung.tw/post/">Previous</a>
+    </li>
+    
 
     
+    <li >
+        <a href="https://www.cjhung.tw/post/">1</a>
+    </li>
     
+    <li  class="current">
+        <a href="https://www.cjhung.tw/post/page/2/">2</a>
+    </li>
     
+
     
+</ol>
+
+
 
 </div>
 
@@ -192,17 +132,6 @@
 </footer>
 
 
-    
-    
-    <script type="text/javascript">
-        window.MathJax = {
-            tex2jax: {
-                inlineMath: [['$', '$']],
-                processEscapes: true
-                }
-            };
-    </script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
@@ -217,80 +146,6 @@ if (!doNotTrack) {
 }
 </script>
 
-<style type="text/css">
-div.highlight {
-    position: relative;
-    margin: 1em 0px;
-}
-
-.copy-code {
-    display: none;
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(78, 78, 78, 0.8);
-    border-radius: var(--radius);
-    padding: 0 5px;
-    font: inherit;
-    user-select: none;
-    cursor: pointer;
-    border: 0;
-    --radius: 8px;
-}
-
-div.highlight:hover .copy-code,pre:hover .copy-code {
-    display: block;
-}
-
-</style>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
 
 
 
