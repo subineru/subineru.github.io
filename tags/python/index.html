@@ -68,7 +68,7 @@
     
     <h3 class="archive-title">
         
-        <span>5</span>
+        <span>6</span>
         
         <span>4</span>
         
@@ -110,11 +110,40 @@
         
         <span>1</span>
         
+        <span>1</span>
+        
         <span class="keyword">python</span>
         articles
     </h3>
     
 
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2024/20240128_self_signed_certificate_error/" target="_blank">[Python] 解決 python 下載資料時憑證錯誤問題</a>
+            </h1>
+        </header>
+        
+  <time datetime="2024-01-28T07:45:00Z" class="post-meta meta-date dt-published">
+    2024-01-28
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/2024' target="_blank">2024</a>
+  
+</div>
+
+
+        <div class="post-content">
+            狀況 今天在 Python 寫 AI 用到 langchain 模組, 使用前需要下載文字轉向量 model, 結果遇到 certificate verify ailed: self signed certificate in certificate chain (_ssl.c:997) 錯誤, 這是因為公司有網路設備在做 SSL 憑證置換的關係卡到, 解決方法除了不檢查憑證,也可以把公司的憑證匯入 certifi, 下載時就會信任公司的憑證. 這樣做如果連到不安全的網址仍然檢查, 程式會停止存取, 所以我認為是相對安全的. 後來測試以前用 requests 或 urllib module 的錯誤也不會卡住,感覺更方便.
+做法如下 首先確認 certifi 安裝的路徑 先打開預存取的網站,這邊用 yahoo 網站為例, 然後選詳細資料的最上面階層的憑證,把憑證給匯出 下面第一圖是馬賽克後的憑證內容, 將憑證的內容貼到 cacert.pem 內 python 程式就可以正常下載檔案 ……
+            <p class="readmore"><a href="https://www.cjhung.tw/post/2024/20240128_self_signed_certificate_error/" target="_blank">Continue reading</a></p>
+        </div>
+    </article>
     
     <article class="post">
         <header>
@@ -268,7 +297,7 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d] �
 
                     <footer id="footer">
     <div>
-        &copy; 2023 <a href="https://www.cjhung.tw/">CJ Hung Blog By CJ Hung</a>
+        &copy; 2024 <a href="https://www.cjhung.tw/">CJ Hung Blog By CJ Hung</a>
         
     </div>
     <br />
@@ -322,6 +351,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.cjhung.tw/post/2024/20240128_self_signed_certificate_error/" title="[Python] 解決 python 下載資料時憑證錯誤問題" target="_blank">[Python] 解決 python 下載資料時憑證錯誤問題</a>
+    </li>
+    
+    <li>
         <a href="https://www.cjhung.tw/post/2023/20231212_revenue_top_20/" title="[上市公司] 2023年11月份 - 上月增加前二十名" target="_blank">[上市公司] 2023年11月份 - 上月增加前二十名</a>
     </li>
     
@@ -357,10 +390,6 @@ if (!doNotTrack) {
         <a href="https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/" title="[Python] Pandas DataFrame 如何顯示所有欄位" target="_blank">[Python] Pandas DataFrame 如何顯示所有欄位</a>
     </li>
     
-    <li>
-        <a href="https://www.cjhung.tw/post/2020/200209_routing_decision/" title="網路練習 routing decision" target="_blank">網路練習 routing decision</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -378,6 +407,8 @@ if (!doNotTrack) {
     
     <li><a href="https://www.cjhung.tw/categories/2023/">2023 (7)</a></li>
     
+    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (1)</a></li>
+    
 </ul>
     </section>
 
@@ -388,6 +419,8 @@ if (!doNotTrack) {
     <a href="https://www.cjhung.tw/tags/brave/">brave</a>
     
     <a href="https://www.cjhung.tw/tags/browser/">browser</a>
+    
+    <a href="https://www.cjhung.tw/tags/certificate/">certificate</a>
     
     <a href="https://www.cjhung.tw/tags/dotnet/">dotnet</a>
     
