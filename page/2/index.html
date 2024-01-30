@@ -69,6 +69,36 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/" title="[Python] Pandas DataFrame 如何顯示所有欄位" target="_blank">[Python] Pandas DataFrame 如何顯示所有欄位</a>
+            </h1>
+        </header>
+        
+  <time datetime="2022-05-10T13:00:00Z" class="post-meta meta-date dt-published">
+    2022-05-10
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/2022' target="_blank">2022</a>
+  
+</div>
+
+
+        <div class="post-content">
+            在使用 Python 的 Pandas DataFrame，如果要列出結果，顯示的行數只有 20 行。
+import pandas as pdimport numpy as npdf = pd.DataFrame(np.random.randint(0, 26,size=(10, 26)), columns=list(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;))df 修改參數為 None 之後，就會顯示所有的行數，不再只顯示 20 行。
+pd.set_option(&#34;display.max.columns&#34;, None)df ……
+        </div>
+        <p class="readmore"><a href="https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.cjhung.tw/post/2020/200209_routing_decision/" title="網路練習 routing decision" target="_blank">網路練習 routing decision</a>
             </h1>
         </header>
@@ -353,37 +383,6 @@ for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/" title="使用 Pandas groupby 和 agg 合併資料" target="_blank">使用 Pandas groupby 和 agg 合併資料</a>
-            </h1>
-        </header>
-        
-  <time datetime="2019-03-03T14:34:27Z" class="post-meta meta-date dt-published">
-    2019-03-03
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/2019' target="_blank">2019</a>
-  
-</div>
-
-
-        <div class="post-content">
-            前因 想要把下面 dataframe , 分類後合併在一起
-order devie abbr 0 first memory m 1 second cpu c 2 third disk d 3 first cpu c 成為下面的 data format
-order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d] 先建立兩個 lambda 變數 ​ f1 的功用是將 dataframe 轉換成字串, f2 則將 dataframe 轉換成 list
-&gt;&gt;&gt;f1 = lambda x: &#34;, &#34;.join(x.dropna()) &gt;&gt;&gt;f1(data.abbr) &#39;m, c, d, c&#39; &gt;&gt;&gt;f2 = lambda x: [z for y in x for z in y] &gt;&gt;&gt;f2(data.……
-        </div>
-        <p class="readmore"><a href="https://www.cjhung.tw/post/2019/python-%E4%BD%BF%E7%94%A8-pandas-groupby-%E5%92%8C-agg-%E5%90%88%E4%BD%B5%E8%B3%87%E6%96%99/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -403,7 +402,15 @@ order devie abbr 0 first memory, cpu [m, c] 1 second cpu [c] 2 third disk [d] �
         <a href="https://www.cjhung.tw/page/2/">2</a>
     </li>
     
+    <li >
+        <a href="https://www.cjhung.tw/page/3/">3</a>
+    </li>
+    
 
+    
+    <li class="next">
+        <a href="https://www.cjhung.tw/page/3/">Next</a>
+    </li>
     
 </ol>
 
@@ -467,6 +474,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/" title="[Python] 均方根誤差(root mean square deviation, RMSE)" target="_blank">[Python] 均方根誤差(root mean square deviation, RMSE)</a>
+    </li>
+    
+    <li>
         <a href="https://www.cjhung.tw/post/2024/20240128_self_signed_certificate_error/" title="[Python] 解決 python 下載資料時憑證錯誤問題" target="_blank">[Python] 解決 python 下載資料時憑證錯誤問題</a>
     </li>
     
@@ -502,10 +513,6 @@ if (!doNotTrack) {
         <a href="https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" title="[Paloalto] 非對稱路由(asymmetric routing) 解決方法" target="_blank">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
     </li>
     
-    <li>
-        <a href="https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/" title="[Python] Pandas DataFrame 如何顯示所有欄位" target="_blank">[Python] Pandas DataFrame 如何顯示所有欄位</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -523,7 +530,7 @@ if (!doNotTrack) {
     
     <li><a href="https://www.cjhung.tw/categories/2023/">2023 (7)</a></li>
     
-    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (1)</a></li>
+    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (2)</a></li>
     
 </ul>
     </section>
@@ -547,6 +554,8 @@ if (!doNotTrack) {
     <a href="https://www.cjhung.tw/tags/game/">game</a>
     
     <a href="https://www.cjhung.tw/tags/linux/">linux</a>
+    
+    <a href="https://www.cjhung.tw/tags/machine_learning/">machine_learning</a>
     
     <a href="https://www.cjhung.tw/tags/network/">network</a>
     

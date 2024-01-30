@@ -71,6 +71,32 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/" target="_blank">[Python] 均方根誤差(root mean square deviation, RMSE)</a>
+            </h1>
+        </header>
+        
+  <time datetime="2024-01-30T06:06:00Z" class="post-meta meta-date dt-published">
+    2024-01-30
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/2024' target="_blank">2024</a>
+  
+</div>
+
+
+        <div class="post-content">
+            均方根誤差(root mean square deviation, RMSE) 說明 「均方根誤差」(RMSE) 就是殘差 (預測誤差) 的標準差。 殘差是離迴歸線資料點有多遠的測量值；RMSE 則是這些殘差值有多散開的測量值。 換句話說，它會告訴您資料在最佳預測線附近的集中情況 公式 $RMSE = \sqrt{\displaystyle\sum_{ i = 1 }^{ n } \frac{(\hat{y}_i - y_i)^2}{n}}$ $\hat{y}_i$ : 預測值 $y_i$ : 觀測值 n : 觀測值的個數 範例 ``` &gt;&gt;&gt; from sklearn.metrics import mean_squared_error &gt;&gt;&gt; actual = [2, 3, 5, 5, 9] &gt;&gt;&gt; calculated = [3, 3, 8, 7, 6] &gt;&gt;&gt; rmse = mean_squared_error(actual, calculated, squared=False) &gt;&gt;&gt; print(&quot;Root Mean Square deviation : &quot; + str(rmse)) Root Mean Square deviation : 2.……
+            <p class="readmore"><a href="https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/" target="_blank">Continue reading</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.cjhung.tw/post/2024/20240128_self_signed_certificate_error/" target="_blank">[Python] 解決 python 下載資料時憑證錯誤問題</a>
             </h1>
         </header>
@@ -160,6 +186,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/" title="[Python] 均方根誤差(root mean square deviation, RMSE)" target="_blank">[Python] 均方根誤差(root mean square deviation, RMSE)</a>
+    </li>
+    
+    <li>
         <a href="https://www.cjhung.tw/post/2024/20240128_self_signed_certificate_error/" title="[Python] 解決 python 下載資料時憑證錯誤問題" target="_blank">[Python] 解決 python 下載資料時憑證錯誤問題</a>
     </li>
     
@@ -195,10 +225,6 @@ if (!doNotTrack) {
         <a href="https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" title="[Paloalto] 非對稱路由(asymmetric routing) 解決方法" target="_blank">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
     </li>
     
-    <li>
-        <a href="https://www.cjhung.tw/post/2022/20220511_pandas_maxcolumns/" title="[Python] Pandas DataFrame 如何顯示所有欄位" target="_blank">[Python] Pandas DataFrame 如何顯示所有欄位</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -216,7 +242,7 @@ if (!doNotTrack) {
     
     <li><a href="https://www.cjhung.tw/categories/2023/">2023 (7)</a></li>
     
-    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (1)</a></li>
+    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (2)</a></li>
     
 </ul>
     </section>
@@ -240,6 +266,8 @@ if (!doNotTrack) {
     <a href="https://www.cjhung.tw/tags/game/">game</a>
     
     <a href="https://www.cjhung.tw/tags/linux/">linux</a>
+    
+    <a href="https://www.cjhung.tw/tags/machine_learning/">machine_learning</a>
     
     <a href="https://www.cjhung.tw/tags/network/">network</a>
     
