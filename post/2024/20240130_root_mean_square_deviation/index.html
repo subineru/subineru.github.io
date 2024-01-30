@@ -91,16 +91,19 @@
         
         <div class="post-content">
             <ul>
-<li>均方根誤差(root mean square deviation, RMSE)
+<li>
+<h2 id="均方根誤差root-mean-square-deviation-rmse">均方根誤差(root mean square deviation, RMSE)</h2>
 <ul>
-<li>說明
+<li>
+<h3 id="說明">說明</h3>
 <ul>
 <li>「均方根誤差」(RMSE) 就是殘差 (預測誤差) 的標準差。
 殘差是離迴歸線資料點有多遠的測量值；RMSE 則是這些殘差值有多散開的測量值。
 換句話說，它會告訴您資料在最佳預測線附近的集中情況</li>
 </ul>
 </li>
-<li>公式
+<li>
+<h3 id="公式">公式</h3>
 <ul>
 <li>$RMSE = \sqrt{\displaystyle\sum_{ i =  1  }^{ n  } \frac{(\hat{y}_i - y_i)^2}{n}}$</li>
 <li>$\hat{y}_i$ : 預測值</li>
@@ -109,18 +112,20 @@
 </ul>
 </li>
 <li>
-<h2 id="範例">範例</h2>
-<pre><code>```
-&gt;&gt;&gt; from sklearn.metrics import mean_squared_error
+<h3 id="範例">範例</h3>
+<ul>
+<li>
+<pre tabindex="0"><code>&gt;&gt;&gt; from sklearn.metrics import mean_squared_error
 &gt;&gt;&gt; actual = [2, 3, 5, 5, 9]
 &gt;&gt;&gt; calculated = [3, 3, 8, 7, 6]
 &gt;&gt;&gt; rmse = mean_squared_error(actual, calculated, squared=False)
-&gt;&gt;&gt; print(&quot;Root Mean Square deviation : &quot; + str(rmse))
+&gt;&gt;&gt; print(&#34;Root Mean Square deviation : &#34; + str(rmse))
 Root Mean Square deviation : 2.1447610589527217
-```
-</code></pre>
+</code></pre></li>
+</ul>
 </li>
-<li>參考資料
+<li>
+<h3 id="參考資料">參考資料</h3>
 <ul>
 <li><a href="https://docs.oracle.com/cloud/help/zh_TW/pbcs_common/PFUSU/insights_metrics_RMSE.htm#PFUSU-GUID-FD9381A1-81E1-4F6D-8EC4-82A6CE2A6E74">RMSE (均方根誤差)</a></li>
 </ul>
