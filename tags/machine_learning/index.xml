@@ -13,7 +13,7 @@
       <pubDate>Tue, 30 Jan 2024 14:06:00 +0800</pubDate>
       
       <guid>https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/</guid>
-      <description>均方根誤差(root mean square deviation, RMSE) 說明 「均方根誤差」(RMSE) 就是殘差 (預測誤差) 的標準差。 殘差是離迴歸線資料點有多遠的測量值；RMSE 則是這些殘差值有多散開的測量值。 換句話說，它會告訴您資料在最佳預測線附近的集中情況 公式 $RMSE = \sqrt{\displaystyle\sum_{ i = 1 }^{ n } \frac{(\hat{y}_i - y_i)^2}{n}}$ $\hat{y}_i$ : 預測值 $y_i$ : 觀測值 n : 觀測值的個數 範例 &amp;gt;&amp;gt;&amp;gt; from sklearn.metrics import mean_squared_error &amp;gt;&amp;gt;&amp;gt; actual = [2, 3, 5, 5, 9] &amp;gt;&amp;gt;&amp;gt; calculated = [3, 3, 8, 7, 6] &amp;gt;&amp;gt;&amp;gt; rmse = mean_squared_error(actual, calculated, squared=False) &amp;gt;&amp;gt;&amp;gt; print(&amp;#34;Root Mean Square deviation : &amp;#34; + str(rmse)) Root Mean Square deviation : 2.</description>
+      <description>說明 「均方根誤差」(RMSE) 就是殘差 (預測誤差) 的標準差。 殘差是離迴歸線資料點有多遠的測量值；RMSE 則是這些殘差值有多散開的測量值。 換句話說，它會告訴您資料在最佳預測線附近的集中情況 公式 $RMSE = \sqrt{\displaystyle\sum_{ i = 1 }^{ n } \frac{(\hat{y}_i - y_i)^2}{n}}$ $\hat{y}_i$ : 預測值 $y_i$ : 觀測值 n : 觀測值的個數 範例 &amp;gt;&amp;gt;&amp;gt; from sklearn.metrics import mean_squared_error &amp;gt;&amp;gt;&amp;gt; actual = [2, 3, 5, 5, 9] &amp;gt;&amp;gt;&amp;gt; calculated = [3, 3, 8, 7, 6] &amp;gt;&amp;gt;&amp;gt; rmse = mean_squared_error(actual, calculated, squared=False) &amp;gt;&amp;gt;&amp;gt; print(&amp;#34;Root Mean Square deviation : &amp;#34; + str(rmse)) Root Mean Square deviation : 2.</description>
     </item>
     
   </channel>
