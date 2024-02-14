@@ -69,6 +69,37 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2024/20240214_vmware_esxi_2107518/" title="VMware 宣布停止提供 ESXi 免費版" target="_blank">VMware 宣布停止提供 ESXi 免費版</a>
+            </h1>
+        </header>
+        
+  <time datetime="2024-02-13T22:30:00Z" class="post-meta meta-date dt-published">
+    2024-02-14
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/2024' target="_blank">2024</a>
+  
+</div>
+
+
+        <div class="post-content">
+             說明 博通(broadcom)在2023年11月收購Vmware之後，持續大動作不斷， 2023年12月對內部員工進行大量裁員，最近宣布停止支援 ESXi 免費版。
+ESXi 是一種可以直接安裝在實體伺服器上的軟體，它可以讓一台伺服器分成多個虛擬的伺服器， 每個虛擬的伺服器都可以執行不同的作業系統和應用程式。這樣可以節省硬體成本，提高效能，簡化管理，並增加安全性。
+因此，當 ESXi 如果轉為收費，將會影響到所有使用該產品的家庭、大小企業與政府。 過去已經安裝 ESXi 的用戶現在雖然可以繼續使用，一旦遇到安全性問題將可能無法更新。 未來新增的功能、硬體上限擴充的支援也會有影響，此次改變影響不小。
+來源 End Of General Availability of the Free vSphere Hypervisor (ESXi 7.x and 8.x) (2107518) ……
+        </div>
+        <p class="readmore"><a href="https://www.cjhung.tw/post/2024/20240214_vmware_esxi_2107518/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/" title="[Python] 均方根誤差(root mean square deviation, RMSE)" target="_blank">[Python] 均方根誤差(root mean square deviation, RMSE)</a>
             </h1>
         </header>
@@ -331,47 +362,6 @@ Brave 版本 首先，請確認 Brave 的版本是 1.52 以上。
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" title="[Paloalto] 非對稱路由(asymmetric routing) 解決方法" target="_blank">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
-            </h1>
-        </header>
-        
-  <time datetime="2022-10-24T13:00:00Z" class="post-meta meta-date dt-published">
-    2022-10-24
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/2022' target="_blank">2022</a>
-  
-</div>
-
-
-        <div class="post-content">
-            最近幫分公司更換防火牆，從 FortiGate 更換成 PaloAlto PA-220。
-前人設計網路時採用雙網關架構。其中一個網關連回總部，
-另一個連外網(預設的 Gateway)，使得連回總部的流量會發生去回不同路，
-在英文叫做 Asymmetric routing。 FortiGate 防火牆上可以通過，但是 PaloAlto 就擋了。
-想到了什麼 在網路架構，這種做法還滿常發生。然而，因為現今的次世代防火牆為了資安，
-往往會進一步檢查 OSI 的 session layer，在看不到完整封包下，
-Paloalto 認為有 evasion attack 問題故進行阻擋。於是，我想到兩種方式處理。
-一種是透過 DHCP 來配發靜態路由，讓內外網的流量走到各自該走的網關(參考文件1)，
-可惜最後實驗我沒有成功。第二種方式是讓 Paloalto 開放允許(參考文件2)。
-如果只要開放部分端口允許非對稱路由，首先在 NETWORK -&gt; Zone Protection 建立 Profile，之後套用到 Zones 上即可。
-具體設定如下:
-Paloalto 也能直接透過 CLI 對全域做開放，不建議這樣做，
-有些端口如外網並沒有非對稱路由的問題，但也會跟著一起開放，就會有潛在的資安風險。
-&gt; configure Entering configuration mode [edit] # set deviceconfig setting tcp asymmetric-path bypass # set deviceconfig setting session tcp-reject-non-syn no # commit 參考文件 1.……
-        </div>
-        <p class="readmore"><a href="https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -459,6 +449,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.cjhung.tw/post/2024/20240214_vmware_esxi_2107518/" title="VMware 宣布停止提供 ESXi 免費版" target="_blank">VMware 宣布停止提供 ESXi 免費版</a>
+    </li>
+    
+    <li>
         <a href="https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/" title="[Python] 均方根誤差(root mean square deviation, RMSE)" target="_blank">[Python] 均方根誤差(root mean square deviation, RMSE)</a>
     </li>
     
@@ -494,10 +488,6 @@ if (!doNotTrack) {
         <a href="https://www.cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/" title="[Brave] Brave 開放垂直標籤" target="_blank">[Brave] Brave 開放垂直標籤</a>
     </li>
     
-    <li>
-        <a href="https://www.cjhung.tw/post/2022/20221024_paloalto_asymmetric_routing/" title="[Paloalto] 非對稱路由(asymmetric routing) 解決方法" target="_blank">[Paloalto] 非對稱路由(asymmetric routing) 解決方法</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -515,7 +505,7 @@ if (!doNotTrack) {
     
     <li><a href="https://www.cjhung.tw/categories/2023/">2023 (7)</a></li>
     
-    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (2)</a></li>
+    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (3)</a></li>
     
 </ul>
     </section>
@@ -533,6 +523,8 @@ if (!doNotTrack) {
     <a href="https://www.cjhung.tw/tags/dotnet/">dotnet</a>
     
     <a href="https://www.cjhung.tw/tags/eps/">EPS</a>
+    
+    <a href="https://www.cjhung.tw/tags/esxi/">esxi</a>
     
     <a href="https://www.cjhung.tw/tags/firewall/">firewall</a>
     
@@ -563,6 +555,8 @@ if (!doNotTrack) {
     <a href="https://www.cjhung.tw/tags/timberman/">timberman</a>
     
     <a href="https://www.cjhung.tw/tags/vertical-tabs/">vertical tabs</a>
+    
+    <a href="https://www.cjhung.tw/tags/vmware/">vmware</a>
     
     <a href="https://www.cjhung.tw/tags/%E5%8F%B0%E5%8C%97/">台北</a>
     

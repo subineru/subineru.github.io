@@ -6,7 +6,19 @@
     <description>Recent content in 2024 on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 30 Jan 2024 14:06:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/archives/2024/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Feb 2024 06:30:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/archives/2024/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VMware 宣布停止提供 ESXi 免費版</title>
+      <link>https://www.cjhung.tw/post/2024/20240214_vmware_esxi_2107518/</link>
+      <pubDate>Wed, 14 Feb 2024 06:30:00 +0800</pubDate>
+      
+      <guid>https://www.cjhung.tw/post/2024/20240214_vmware_esxi_2107518/</guid>
+      <description> 說明 博通(broadcom)在2023年11月收購Vmware之後，持續大動作不斷， 2023年12月對內部員工進行大量裁員，最近宣布停止支援 ESXi 免費版。
+ESXi 是一種可以直接安裝在實體伺服器上的軟體，它可以讓一台伺服器分成多個虛擬的伺服器， 每個虛擬的伺服器都可以執行不同的作業系統和應用程式。這樣可以節省硬體成本，提高效能，簡化管理，並增加安全性。
+因此，當 ESXi 如果轉為收費，將會影響到所有使用該產品的家庭、大小企業與政府。 過去已經安裝 ESXi 的用戶現在雖然可以繼續使用，一旦遇到安全性問題將可能無法更新。 未來新增的功能、硬體上限擴充的支援也會有影響，此次改變影響不小。
+來源 End Of General Availability of the Free vSphere Hypervisor (ESXi 7.x and 8.x) (2107518) </description>
+    </item>
+    
     <item>
       <title>[Python] 均方根誤差(root mean square deviation, RMSE)</title>
       <link>https://www.cjhung.tw/post/2024/20240130_root_mean_square_deviation/</link>
