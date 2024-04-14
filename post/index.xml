@@ -6,7 +6,16 @@
     <description>Recent content in Posts on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 14 Feb 2024 06:30:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Apr 2024 06:30:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>更新 docker-compose containers 既存的 Images</title>
+      <link>https://www.cjhung.tw/post/2024/20240414_docker_compose_update/</link>
+      <pubDate>Sun, 14 Apr 2024 06:30:00 +0800</pubDate>
+      
+      <guid>https://www.cjhung.tw/post/2024/20240414_docker_compose_update/</guid>
+      <description> 說明 docker-compose pull docker-compose up --force-recreate --build -d docker image prune -f 來源 How to update existing images with docker-compose? </description>
+    </item>
+    
     <item>
       <title>VMware 宣布停止提供 ESXi 免費版</title>
       <link>https://www.cjhung.tw/post/2024/20240214_vmware_esxi_2107518/</link>

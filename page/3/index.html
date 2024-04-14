@@ -69,6 +69,37 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2019/python-100days5/" title="練習 Python 100 Days(5)" target="_blank">練習 Python 100 Days(5)</a>
+            </h1>
+        </header>
+        
+  <time datetime="2019-05-11T09:00:27Z" class="post-meta meta-date dt-published">
+    2019-05-11
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/2019' target="_blank">2019</a>
+  
+</div>
+
+
+        <div class="post-content">
+            練習 Python 100 Days 前幾天的比較簡單, 就從第五天的練習題開始
+水仙花數(Narcissistic number) 用來描述一個 N 位非負數, 其中每個數字的 N 次方和等於該數字本身 代碼:
+for num in range(1000): squares = len(str(num)) count = 0 count = sum([int(x)**squares for x in str(num)]) if num == count: print(f&#34;The Narcissistic number is : {count}&#34; ) 完美數(Perfect number) 用來描述一個數字, 除了自己以外的所有真因子的總和, 等於它自己, 就是完美數 代碼:
+for num in range(100): list = [x for x in range(1, num) if num%x==0] if sum != [] and sum(list) == num: print(num) 參考: Python-100-Days - Day5……
+        </div>
+        <p class="readmore"><a href="https://www.cjhung.tw/post/2019/python-100days5/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.cjhung.tw/post/2019/%E5%AF%A6%E6%95%B8%E8%BD%89%E6%8F%9B%E6%88%90%E6%95%B4%E6%95%B8/" title="實數轉換成整數" target="_blank">實數轉換成整數</a>
             </h1>
         </header>
@@ -215,6 +246,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.cjhung.tw/post/2024/20240414_docker_compose_update/" title="更新 docker-compose containers 既存的 Images" target="_blank">更新 docker-compose containers 既存的 Images</a>
+    </li>
+    
+    <li>
         <a href="https://www.cjhung.tw/post/2024/20240214_vmware_esxi_2107518/" title="VMware 宣布停止提供 ESXi 免費版" target="_blank">VMware 宣布停止提供 ESXi 免費版</a>
     </li>
     
@@ -250,10 +285,6 @@ if (!doNotTrack) {
         <a href="https://www.cjhung.tw/post/2023/20230812_nuitka_introduce/" title="[Python] nuitka 使用介紹" target="_blank">[Python] nuitka 使用介紹</a>
     </li>
     
-    <li>
-        <a href="https://www.cjhung.tw/post/2023/20230601_brave_introduce_vertical_tabs/" title="[Brave] Brave 開放垂直標籤" target="_blank">[Brave] Brave 開放垂直標籤</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -271,7 +302,7 @@ if (!doNotTrack) {
     
     <li><a href="https://www.cjhung.tw/categories/2023/">2023 (7)</a></li>
     
-    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (3)</a></li>
+    <li><a href="https://www.cjhung.tw/categories/2024/">2024 (4)</a></li>
     
 </ul>
     </section>
@@ -285,6 +316,10 @@ if (!doNotTrack) {
     <a href="https://www.cjhung.tw/tags/browser/">browser</a>
     
     <a href="https://www.cjhung.tw/tags/certificate/">certificate</a>
+    
+    <a href="https://www.cjhung.tw/tags/docker/">docker</a>
+    
+    <a href="https://www.cjhung.tw/tags/docker-compose/">docker-compose</a>
     
     <a href="https://www.cjhung.tw/tags/dotnet/">dotnet</a>
     
