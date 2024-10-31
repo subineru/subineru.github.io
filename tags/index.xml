@@ -6,7 +6,25 @@
     <description>Recent content in Tags on CJ Hung Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 14 Apr 2024 06:30:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Oct 2024 20:26:00 +0800</lastBuildDate><atom:link href="https://www.cjhung.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>autohotkey</title>
+      <link>https://www.cjhung.tw/tags/autohotkey/</link>
+      <pubDate>Thu, 31 Oct 2024 20:26:00 +0800</pubDate>
+      
+      <guid>https://www.cjhung.tw/tags/autohotkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://www.cjhung.tw/tags/powershell/</link>
+      <pubDate>Thu, 31 Oct 2024 20:26:00 +0800</pubDate>
+      
+      <guid>https://www.cjhung.tw/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>docker</title>
       <link>https://www.cjhung.tw/tags/docker/</link>
