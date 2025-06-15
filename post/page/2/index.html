@@ -70,6 +70,39 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.cjhung.tw/post/2023/20230928_fix_error_dotnet_publish/" title="[DOTNET] dotnet 使用參數 self-contained 產生執行程式跳出無法解析" target="_blank">[DOTNET] dotnet 使用參數 self-contained 產生執行程式跳出無法解析</a>
+            </h1>
+        </header>
+        
+  <time datetime="2023-09-28T02:27:00Z" class="post-meta meta-date dt-published">
+    2023-09-28
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/2023' target="_blank">2023</a>
+  
+</div>
+
+
+        <div class="post-content">
+            最近在瞭解如何使用 .NET 6.0 寫桌面工具，執行 dotnet publish 來產生執行檔這部分有幾種方式，
+其中一種是帶 Self-Contained，就不用在電腦安裝 .NET Runtime 執行開發的程式，
+也因為要包很多程式碼在執行檔內，執行程式會變很大。
+而我在編譯過程中，跳出 error NU1100: 無法解析 &rsquo;net6.0-windows 7.0&rsquo; 的錯誤，
+單純執行 dotnet run 就不會有問題。 尋遍網路上的文章，看到有人問 dotnet nuget list source 未設定來源的問題，
+死馬當活馬醫的心態下，幫自己的 nuget 新增來源 最後再重新跑一次，就可以正常編譯了。 ……
+        </div>
+        <p class="readmore"><a href="https://www.cjhung.tw/post/2023/20230928_fix_error_dotnet_publish/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.cjhung.tw/post/2023/20230812_nuitka_introduce/" title="[Python] nuitka 使用介紹" target="_blank">[Python] nuitka 使用介紹</a>
             </h1>
         </header>
@@ -276,7 +309,7 @@ pd.set_option(&#34;display.max.columns&#34;, None)df ……
 
                     <footer id="footer">
     <div>
-        &copy; 2024 <a href="https://www.cjhung.tw/">CJ Hung Blog By CJ Hung</a>
+        &copy; 2025 <a href="https://www.cjhung.tw/">CJ Hung Blog By CJ Hung</a>
         
     </div>
     <br />
@@ -330,6 +363,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.cjhung.tw/post/2025/20250615_intermediate-nmap/" title="Intermediate Nmap" target="_blank">Intermediate Nmap</a>
+    </li>
+    
+    <li>
         <a href="https://www.cjhung.tw/post/2024/20241031_switch_audio_output_automation/" title="使用 autohotkey 設定音效輸出的切換快捷鍵" target="_blank">使用 autohotkey 設定音效輸出的切換快捷鍵</a>
     </li>
     
@@ -365,10 +402,6 @@ if (!doNotTrack) {
         <a href="https://www.cjhung.tw/post/2023/20231025_revenue_top_10/" title="[上市公司] 2023年9月份 - 上月增加前二十名" target="_blank">[上市公司] 2023年9月份 - 上月增加前二十名</a>
     </li>
     
-    <li>
-        <a href="https://www.cjhung.tw/post/2023/20230928_fix_error_dotnet_publish/" title="[DOTNET] dotnet 使用參數 self-contained 產生執行程式跳出無法解析" target="_blank">[DOTNET] dotnet 使用參數 self-contained 產生執行程式跳出無法解析</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -387,6 +420,8 @@ if (!doNotTrack) {
     <li><a href="https://www.cjhung.tw/categories/2023/">2023 (7)</a></li>
     
     <li><a href="https://www.cjhung.tw/categories/2024/">2024 (5)</a></li>
+    
+    <li><a href="https://www.cjhung.tw/categories/2025/">2025 (1)</a></li>
     
 </ul>
     </section>

@@ -2,25 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.cjhung.tw/categories/2025/</loc>
+    <lastmod>2025-06-15T12:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/archives/2025/</loc>
+    <lastmod>2025-06-15T12:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/archives/</loc>
+    <lastmod>2025-06-15T12:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/categories/</loc>
+    <lastmod>2025-06-15T12:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/</loc>
+    <lastmod>2025-06-15T12:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/post/2025/20250615_intermediate-nmap/</loc>
+    <lastmod>2025-06-15T12:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.cjhung.tw/post/</loc>
+    <lastmod>2025-06-15T12:55:00+08:00</lastmod>
+  </url><url>
     <loc>https://www.cjhung.tw/categories/2024/</loc>
     <lastmod>2024-10-31T20:26:00+08:00</lastmod>
   </url><url>
     <loc>https://www.cjhung.tw/archives/2024/</loc>
     <lastmod>2024-10-31T20:26:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.cjhung.tw/archives/</loc>
-    <lastmod>2024-10-31T20:26:00+08:00</lastmod>
-  </url><url>
     <loc>https://www.cjhung.tw/tags/autohotkey/</loc>
-    <lastmod>2024-10-31T20:26:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/categories/</loc>
-    <lastmod>2024-10-31T20:26:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/</loc>
-    <lastmod>2024-10-31T20:26:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.cjhung.tw/post/</loc>
     <lastmod>2024-10-31T20:26:00+08:00</lastmod>
   </url><url>
     <loc>https://www.cjhung.tw/tags/powershell/</loc>
