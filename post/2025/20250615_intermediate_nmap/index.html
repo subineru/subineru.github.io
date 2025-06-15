@@ -95,17 +95,17 @@
 <h2 id="scanning-and-enumeration">Scanning and Enumeration</h2>
 <p>I begin by running RustScan against the target to discover available services and open ports. The scan identifies three open ports: 22, 2222, and 31337. Intrigued by these findings, I decide to probe each service using telnet.
 
-        <img class="mx-auto" alt="image" src="./Intermediate_nmap_1.png" />   
+        <img class="mx-auto" alt="image" src="./Intermediate_Nmap_1.png" />   
     </p>
 <h2 id="vulnerability-scanning">Vulnerability Scanning</h2>
 <p>After I telnet to port 31337, the server responds with user credentials (user:pass). I&rsquo;m going to leverage this information to establish an SSH connection.
 
-        <img class="mx-auto" alt="image" src="./Intermediate_nmap_2.png" />   
+        <img class="mx-auto" alt="image" src="./Intermediate_Nmap_2.png" />   
     </p>
 <h2 id="gaining-access">Gaining Access</h2>
 <p>I successfully log into the server and begin exploring directories to find the answer. Eventually, I discover flag.txt in /home/user, so I cat the file to retrieve the flag.
 
-        <img class="mx-auto" alt="image" src="./Intermediate_nmap_3.png" />   
+        <img class="mx-auto" alt="image" src="./Intermediate_Nmap_3.png" />   
     </p>
 <h1 id="room-link">Room link</h1>
 <p><a href="https://tryhackme.com/room/intermediatenmap">Intermediate Nmap</a></p>
