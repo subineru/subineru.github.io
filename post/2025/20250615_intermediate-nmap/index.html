@@ -84,12 +84,6 @@
   
     <a href='/categories/2025' target="_blank">2025</a>
   
-    <a href='/categories/rustscan' target="_blank">rustscan</a>
-  
-    <a href='/categories/snmp' target="_blank">snmp</a>
-  
-    <a href='/categories/tryhackme' target="_blank">tryhackme</a>
-  
 </div>
 
 
@@ -100,13 +94,19 @@
 <h1 id="step-by-step">Step-by-Step</h1>
 <h2 id="scanning-and-enumeration">Scanning and Enumeration</h2>
 <p>I begin by running RustScan against the target to discover available services and open ports. The scan identifies three open ports: 22, 2222, and 31337. Intrigued by these findings, I decide to probe each service using telnet.
-![[Intermediate_nmap_1.png]]</p>
+
+        <img class="mx-auto" alt="image" src="./Intermediate_nmap_1.png" />   
+    </p>
 <h2 id="vulnerability-scanning">Vulnerability Scanning</h2>
 <p>After I telnet to port 31337, the server responds with user credentials (user:pass). I&rsquo;m going to leverage this information to establish an SSH connection.
-![[Intermediate_nmap_2.png]]</p>
+
+        <img class="mx-auto" alt="image" src="./Intermediate_nmap_2.png" />   
+    </p>
 <h2 id="gaining-access">Gaining Access</h2>
 <p>I successfully log into the server and begin exploring directories to find the answer. Eventually, I discover flag.txt in /home/user, so I cat the file to retrieve the flag.
-![[Intermediate_nmap_3.png]]</p>
+
+        <img class="mx-auto" alt="image" src="./Intermediate_nmap_3.png" />   
+    </p>
 <h1 id="room-link">Room link</h1>
 <p><a href="https://tryhackme.com/room/intermediatenmap">Intermediate Nmap</a></p>
 
@@ -120,7 +120,15 @@
 
         <div class="post-meta meta-tags">
             
-            No tags
+            <ul class="clearfix">
+                
+                <li><a href='/tags/rustscan' target="_blank">rustscan</a></li>
+                
+                <li><a href='/tags/snmp' target="_blank">snmp</a></li>
+                
+                <li><a href='/tags/tryhackme' target="_blank">tryhackme</a></li>
+                
+            </ul>
             
         </div>
     </article>
@@ -354,12 +362,6 @@ div.highlight:hover .copy-code,pre:hover .copy-code {
     
     <li><a href="https://www.cjhung.tw/categories/2025/">2025 (1)</a></li>
     
-    <li><a href="https://www.cjhung.tw/categories/rustscan/">rustscan (1)</a></li>
-    
-    <li><a href="https://www.cjhung.tw/categories/snmp/">snmp (1)</a></li>
-    
-    <li><a href="https://www.cjhung.tw/categories/tryhackme/">tryhackme (1)</a></li>
-    
 </ul>
     </section>
 
@@ -407,13 +409,19 @@ div.highlight:hover .copy-code,pre:hover .copy-code {
     
     <a href="https://www.cjhung.tw/tags/revenue/">revenue</a>
     
+    <a href="https://www.cjhung.tw/tags/rustscan/">rustscan</a>
+    
     <a href="https://www.cjhung.tw/tags/shell/">shell</a>
+    
+    <a href="https://www.cjhung.tw/tags/snmp/">snmp</a>
     
     <a href="https://www.cjhung.tw/tags/stock/">stock</a>
     
     <a href="https://www.cjhung.tw/tags/taiwan/">taiwan</a>
     
     <a href="https://www.cjhung.tw/tags/timberman/">timberman</a>
+    
+    <a href="https://www.cjhung.tw/tags/tryhackme/">tryhackme</a>
     
     <a href="https://www.cjhung.tw/tags/vertical-tabs/">vertical tabs</a>
     
